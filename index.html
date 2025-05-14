@@ -29,34 +29,101 @@
     <meta name="twitter:image" content="/api/placeholder/1200/630">
     
     <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "ITAR Regiment",
-      "alternateName": [
-        "ITAR Foxhole", 
-        "ITAR Colonial", 
-        "Clan Italiano Foxhole", 
-        "Reggimento Italiano Foxhole", 
-        "Foxhole Italia Clan", 
-        "ITAR Clan Foxhole",
-        "Miglior Clan Foxhole Italia"
-      ],
-      "description": "Il principale reggimento italiano e clan Colonial in Foxhole, dedicato a fornire un'esperienza di gioco organizzata per la comunità Foxhole Italia.",
-      "url": "https://www.foxholeitaliaregiment.github.io",
-      "logo": "/api/placeholder/300/300",
-      "sameAs": [
-        "https://discord.gg/PjBqEg2ZK3" 
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "contactType": "customer support",
-        "availableLanguage": "Italian"
-      },
-      "keywords": "foxhole italia, clan italiano foxhole, reggimento italiano foxhole, colonial, gaming community, foxhole, italia, italiani foxhole, clan foxhole, reggimento foxhole"
-    }
-    </script>
+<!-- Schema per Gaming Organization -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": ["Organization", "SportsClub"],
+  "name": "Foxhole italia [ITAR] | regimento italiano clan foxhole ITAR",
+  "alternateName": [
+    "ITAR Foxhole", 
+    "ITAR Colonial", 
+    "Clan Italiano Foxhole", 
+    "Reggimento Italiano Foxhole", 
+    "Foxhole Italia Clan"
+  ],
+  "description": "Il principale reggimento italiano e clan Colonial in Foxhole, dedicato a fornire un'esperienza di gioco organizzata per la comunità Foxhole Italia.",
+  "url": "https://foxholeitaliaregiment.github.io",
+  "logo": "https://foxholeitaliaregiment.github.io/api/placeholder/300/300",
+  "image": "https://foxholeitaliaregiment.github.io/api/placeholder/1200/630",
+  "foundingDate": "2024",
+  "slogan": "Elite Colonial Forces • Il Tuo Clan Foxhole Italia",
+  "sport": "Foxhole Gaming",
+  "memberOf": {
+    "@type": "Organization",
+    "name": "Colonial Forces",
+    "url": "https://foxhole.fandom.com/wiki/Colonial_Legion"
+  },
+  "numberOfMembers": "100+",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IT"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "customer support",
+    "availableLanguage": "Italian",
+    "url": "https://discord.gg/PjBqEg2ZK3"
+  },
+  "sameAs": [
+    "https://discord.gg/PjBqEg2ZK3"
+  ],
+  "keywords": "foxhole italia, clan italiano foxhole, reggimento italiano foxhole, colonial, gaming community",
+  "audience": {
+    "@type": "Audience",
+    "geographicArea": "Italy",
+    "audienceType": "Foxhole Players"
+  }
+}
+</script>
+
+<!-- Schema per il sito web -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Foxhole italia [ITAR] | regimento italiano clan foxhole ITAR",
+  "url": "https://foxholeitaliaregiment.github.io",
+  "description": "Il miglior reggimento italiano Colonial e clan Foxhole italiano. Community gaming italiana per Foxhole con oltre 100 membri attivi.",
+  "author": {
+    "@type": "Organization",
+    "name": "ITAR Regiment"
+  },
+  "inLanguage": "it-IT",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://foxholeitaliaregiment.github.io/#search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- Schema per Gaming Event (per le operazioni) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Event",
+  "name": "Operazioni Colonial ITAR",
+  "description": "Operazioni militari organizzate dal reggimento italiano ITAR in Foxhole",
+  "organizer": {
+    "@type": "Organization",
+    "name": "ITAR Regiment",
+    "url": "https://foxholeitaliaregiment.github.io"
+  },
+  "location": {
+    "@type": "VirtualLocation",
+    "name": "Foxhole Game World",
+    "url": "https://discord.gg/PjBqEg2ZK3"
+  },
+  "eventStatus": "https://schema.org/EventScheduled",
+  "eventAttendanceMode": "https://schema.org/OnlineEventAttendanceMode",
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Foxhole Players",
+    "geographicArea": "Italy"
+  }
+}
+</script>
     
     <style>
         * {
