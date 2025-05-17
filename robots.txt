@@ -1,8 +1,3 @@
 User-agent: *
 Allow: /
-
-# Sitemap location
-Sitemap: https://foxholeitaliaregiment.github.io/sitemap.xml
-
-# Additional sitemap references
 Sitemap: https://foxholeitaliaregiment.github.io/sitemap.xml
