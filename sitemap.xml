@@ -3,27 +3,9 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://foxholeitaliaregiment.github.io/</loc>
-    <lastmod>2025-05-15</lastmod>
+    <lastmod>2025-05-17</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="it" href="https://foxholeitaliaregiment.github.io/"/>
-  </url>
-  <url>
-    <loc>https://foxholeitaliaregiment.github.io/#home</loc>
-    <lastmod>2025-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  <url>
-    <loc>https://foxholeitaliaregiment.github.io/#operazioni</loc>
-    <lastmod>2025-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://foxholeitaliaregiment.github.io/#chi-siamo</loc>
-    <lastmod>2025-05-15</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
   </url>
 </urlset>
