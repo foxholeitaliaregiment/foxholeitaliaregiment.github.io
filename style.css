@@ -343,6 +343,7 @@ header {
     color: rgba(255, 255, 255, 0.8);
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -450,6 +451,7 @@ header {
     transition: all 0.3s ease;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
@@ -805,6 +807,7 @@ footer {
     transition: all 0.3s ease;
     display: -webkit-box;
     -webkit-line-clamp: 2;
+    line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
