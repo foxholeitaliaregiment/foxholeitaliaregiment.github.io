@@ -1,0 +1,1609 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="content-language" content="it-IT">
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <link rel="canonical" href="https://foxholeitaliaregiment.github.io/blog.html" />
+    <link rel="icon" href="./icona.ico" sizes="any">
+    
+    <!-- SEO Meta Tags -->
+    <title>Blog Ufficiale ITAR | Articoli su Foxhole per la Community Italiana</title>
+    <meta name="description" content="Scopri il mondo di Foxhole con il blog ufficiale del Reggimento ITAR. Guide, strategie, report di guerra e contenuti esclusivi per la community italiana di Foxhole. Entra nell'universo Colonial con il tuo clan italiano di riferimento!">
+    <meta name="keywords" content="foxhole blog italiano, guide foxhole italiano, clan colonial foxhole, strategia foxhole, foxhole tutorial italiano, come giocare a foxhole, foxhole tattica, foxhole regiment italiano, foxhole italia, blog gaming italiano">
+    <meta name="author" content="ITAR Regiment">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Blog ITAR | Guide e Articoli su Foxhole per Italiani">
+    <meta property="og:description" content="Articoli, guide e strategie per Foxhole in italiano. Scopri il mondo Colonial con il blog del Reggimento ITAR, la più grande community italiana di Foxhole.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://foxholeitaliaregiment.github.io/blog.html">
+    <meta property="og:image" content="https://foxholeitaliaregiment.github.io/images/itar-regiment-banner.jpg">
+    <meta property="og:site_name" content="ITAR Foxhole Italia Clan - Blog">
+    <meta property="og:locale" content="it_IT">
+    
+    <!-- Schema per Blog -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "headline": "Blog Ufficiale ITAR Regiment - Foxhole Italia",
+      "description": "Articoli, guide e strategie per Foxhole in italiano dal Reggimento ITAR Colonial",
+      "image": "https://foxholeitaliaregiment.github.io/images/itar-regiment-banner.jpg",
+      "publisher": {
+        "@type": "Organization",
+        "name": "ITAR Regiment",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://foxholeitaliaregiment.github.io/images/itar-logo.jpg"
+        }
+      },
+      "url": "https://foxholeitaliaregiment.github.io/blog.html",
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {
+            "@type": "BlogPosting",
+            "position": 1,
+            "headline": "Guida Completa a Foxhole: Tutto Quello che Devi Sapere sul MMO Strategico",
+            "description": "Scopri cos'è Foxhole, come funziona e perché è diventato uno dei giochi strategici più avvincenti. Guida dettagliata per principianti e veterani.",
+            "author": {"@type": "Person", "name": "Staff ITAR"},
+            "datePublished": "2025-05-10T09:00:00+02:00",
+            "url": "https://foxholeitaliaregiment.github.io/blog/guida-completa-foxhole.html"
+          },
+          {
+            "@type": "BlogPosting",
+            "position": 2,
+            "headline": "Le 5 Migliori Strategie Colonial per Vincere in Foxhole",
+            "description": "Tattiche avanzate per i giocatori Colonial: dalle operazioni logistiche agli attacchi coordinati, ecco come dominare sul campo di battaglia.",
+            "author": {"@type": "Person", "name": "Staff ITAR"},
+            "datePublished": "2025-05-15T14:30:00+02:00",
+            "url": "https://foxholeitaliaregiment.github.io/blog/strategie-colonial-foxhole.html"
+          }
+        ]
+      }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #0a0f1c;
+            background-image: 
+                linear-gradient(rgba(10, 15, 28, 0.85), rgba(10, 15, 28, 0.85)),
+                url('./sfondo-body.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(10, 15, 28, 0.95);
+            backdrop-filter: blur(20px);
+            border-bottom: 2px solid rgba(107, 142, 35, 0.3);
+            z-index: 9999;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            height: 70px;
+            position: relative;
+        }
+
+        /* Logo */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            color: inherit;
+            z-index: 10000;
+        }
+
+        .logo-icon {
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(45deg, #6b8e23, #8fbc8f);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.6rem;
+            box-shadow: 0 3px 10px rgba(107, 142, 35, 0.3);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1;
+        }
+
+        .logo-main {
+            font-size: 1.8rem;
+            font-weight: 900;
+            letter-spacing: 1px;
+            color: #6b8e23;
+            text-shadow: 0 0 10px rgba(107, 142, 35, 0.4);
+        }
+
+        .logo-sub {
+            font-size: 0.75rem;
+            color: #8fbc8f;
+            font-weight: 400;
+            letter-spacing: 3px;
+            margin-top: 2px;
+        }
+
+        /* Navigation */
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-link {
+            color: #e3f2fd;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 0.7rem 1.2rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link:hover {
+            color: #6b8e23;
+            background: rgba(107, 142, 35, 0.1);
+            border: 1px solid rgba(107, 142, 35, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .nav-cta {
+            background: linear-gradient(45deg, #6b8e23, #8fbc8f) !important;
+            color: white !important;
+            border: none !important;
+            box-shadow: 0 3px 10px rgba(107, 142, 35, 0.3);
+        }
+
+        .nav-cta:hover {
+            background: linear-gradient(45deg, #8fbc8f, #6b8e23) !important;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(107, 142, 35, 0.5);
+        }
+
+        /* Main Content */
+        .main-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 20px 50px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+            gap: 40px;
+        }
+
+        /* Blog Header */
+        .blog-header {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(107, 142, 35, 0.3);
+        }
+
+        .blog-title {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(45deg, #6b8e23, #8fbc8f);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: drop-shadow(0 0 20px rgba(107, 142, 35, 0.3)); }
+            to { filter: drop-shadow(0 0 30px rgba(107, 142, 35, 0.6)); }
+        }
+
+        .blog-subtitle {
+            font-size: 1.4rem;
+            color: #8fbc8f;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-description {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        /* Articles Section */
+        .articles-section {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        /* Featured Article */
+        .featured-article {
+            background: rgba(107, 142, 35, 0.05);
+            border: 2px solid rgba(107, 142, 35, 0.2);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .featured-article:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+            border-color: rgba(107, 142, 35, 0.4);
+        }
+
+        .featured-tag {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: linear-gradient(45deg, #6b8e23, #8fbc8f);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            z-index: 1;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+
+        .article-content {
+            padding: 2rem;
+        }
+
+        .article-meta {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #8fbc8f;
+        }
+
+        .article-category {
+            background: rgba(107, 142, 35, 0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            color: #8fbc8f;
+            font-weight: 600;
+        }
+
+        .article-date {
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .article-title {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+            color: #e3f2fd;
+            transition: all 0.3s ease;
+        }
+
+        .featured-article:hover .article-title {
+            color: #8fbc8f;
+        }
+
+        .article-excerpt {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(107, 142, 35, 0.1);
+            color: #8fbc8f;
+            text-decoration: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(107, 142, 35, 0.3);
+        }
+
+        .read-more:hover {
+            background: linear-gradient(45deg, #6b8e23, #8fbc8f);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(107, 142, 35, 0.3);
+        }
+
+        /* Article List */
+        .article-list {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2.5rem;
+        }
+
+        .article-card {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            background: rgba(107, 142, 35, 0.05);
+            border: 2px solid rgba(107, 142, 35, 0.2);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: rgba(107, 142, 35, 0.4);
+        }
+
+        .card-image-container {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .card-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .article-card:hover .card-image {
+            transform: scale(1.05);
+        }
+
+        .card-content {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #e3f2fd;
+            transition: all 0.3s ease;
+        }
+
+        .article-card:hover .card-title {
+            color: #8fbc8f;
+        }
+
+        .card-excerpt {
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        .sidebar-widget {
+            background: rgba(107, 142, 35, 0.05);
+            border: 2px solid rgba(107, 142, 35, 0.2);
+            border-radius: 20px;
+            padding: 2rem;
+        }
+
+        .widget-title {
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: #8fbc8f;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        .widget-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(45deg, #6b8e23, #8fbc8f);
+            border-radius: 3px;
+        }
+
+        /* Categories Widget */
+        .categories-list {
+            list-style: none;
+        }
+
+        .category-item {
+            margin-bottom: 1rem;
+        }
+
+        .category-link {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #e3f2fd;
+            text-decoration: none;
+            padding: 0.6rem 0;
+            border-bottom: 1px solid rgba(107, 142, 35, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .category-link:hover {
+            color: #8fbc8f;
+            padding-left: 0.5rem;
+        }
+
+        .category-count {
+            background: rgba(107, 142, 35, 0.1);
+            color: #8fbc8f;
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Popular Posts Widget */
+        .popular-posts {
+            list-style: none;
+        }
+
+        .popular-post {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .post-thumb {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .post-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all 0.3s ease;
+        }
+
+        .post-details {
+            flex: 1;
+        }
+
+        .post-link {
+            color: #e3f2fd;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .post-link:hover {
+            color: #8fbc8f;
+        }
+
+        .post-date {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-top: 0.5rem;
+        }
+
+        /* Subscribe Widget */
+        .subscribe-widget p {
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .subscribe-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-input {
+            padding: 0.8rem 1.2rem;
+            border-radius: 10px;
+            border: 1px solid rgba(107, 142, 35, 0.3);
+            background: rgba(0, 0, 0, 0.2);
+            color: white;
+            font-size: 1rem;
+        }
+
+        .form-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #8fbc8f;
+            box-shadow: 0 0 10px rgba(107, 142, 35, 0.3);
+        }
+
+        .form-button {
+            background: linear-gradient(45deg, #6b8e23, #8fbc8f);
+            color: white;
+            padding: 0.8rem 1.2rem;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .form-button:hover {
+            background: linear-gradient(45deg, #8fbc8f, #6b8e23);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(107, 142, 35, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(10, 15, 28, 0.95);
+            padding: 3rem 0;
+            margin-top: 5rem;
+            border-top: 1px solid rgba(107, 142, 35, 0.2);
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem;
+        }
+
+        .footer-column h3 {
+            color: #8fbc8f;
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 0.8rem;
+        }
+
+        .footer-column h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 3px;
+            background: linear-gradient(45deg, #6b8e23, #8fbc8f);
+            border-radius: 3px;
+        }
+
+        .footer-column p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-column ul li a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .footer-column ul li a:hover {
+            color: #8fbc8f;
+        }
+
+        .footer-bottom {
+            background: rgba(0, 0, 0, 0.2);
+            padding: 1.5rem 0;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Styles */
+        @media (max-width: 900px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .blog-title {
+                font-size: 2.5rem;
+            }
+
+            .article-card {
+                grid-template-columns: 1fr;
+            }
+
+            .card-image-container {
+                height: 200px;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .nav-links {
+                display: none;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.5rem;
+            }
+
+            .featured-tag {
+                top: 10px;
+                right: 10px;
+                font-size: 0.8rem;
+                padding: 0.3rem 0.8rem;
+            }
+
+            .article-title {
+                font-size: 1.8rem;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Per l'articolo singolo */
+        .single-article {
+            margin-top: 2rem;
+            padding: 2rem;
+            background: rgba(107, 142, 35, 0.05);
+            border: 2px solid rgba(107, 142, 35, 0.2);
+            border-radius: 20px;
+        }
+
+        .article-header {
+            margin-bottom: 2rem;
+        }
+
+        .article-body {
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .article-body h2 {
+            color: #8fbc8f;
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+        }
+
+        .article-body h3 {
+            color: #e3f2fd;
+            margin: 1.5rem 0 1rem;
+            font-size: 1.4rem;
+        }
+
+        .article-body p {
+            margin-bottom: 1.5rem;
+        }
+
+        .article-body ul, .article-body ol {
+            margin-bottom: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        .article-body img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .article-body blockquote {
+            border-left: 4px solid #6b8e23;
+            padding-left: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .article-body a {
+            color: #8fbc8f;
+            text-decoration: underline;
+            transition: all 0.3s ease;
+        }
+
+        .article-body a:hover {
+            color: #6b8e23;
+            text-decoration: none;
+        }
+
+        .article-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 3rem;
+        }
+
+        .article-tag {
+            background: rgba(107, 142, 35, 0.1);
+            color: #8fbc8f;
+            padding: 0.4rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .article-tag:hover {
+            background: rgba(107, 142, 35, 0.2);
+            transform: translateY(-2px);
+        }
+
+        .article-author {
+            margin-top: 3rem;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .author-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            color: #e3f2fd;
+        }
+
+        .author-bio {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .article-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(107, 142, 35, 0.2);
+        }
+
+        .nav-previous, .nav-next {
+            max-width: 48%;
+        }
+
+        .nav-previous a, .nav-next a {
+            display: flex;
+            flex-direction: column;
+            color: #e3f2fd;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .nav-previous a:hover, .nav-next a:hover {
+            color: #8fbc8f;
+        }
+
+        .nav-label {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 0.3rem;
+        }
+
+        .nav-title {
+            font-weight: 600;
+        }
+
+        .related-posts {
+            margin-top: 4rem;
+        }
+
+        .related-title {
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            color: #8fbc8f;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .related-card {
+            background: rgba(107, 142, 35, 0.05);
+            border: 2px solid rgba(107, 142, 35, 0.2);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .related-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            border-color: rgba(107, 142, 35, 0.4);
+        }
+
+        .related-image {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+
+        .related-content {
+            padding: 1.2rem;
+        }
+
+        .related-card-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.8rem;
+            color: #e3f2fd;
+            transition: all 0.3s ease;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .related-card:hover .related-card-title {
+            color: #8fbc8f;
+        }
+
+        /* Visualizzazione dell'articolo */
+        #full-article {
+            display: none;
+        }
+
+        #full-article.active {
+            display: block;
+        }
+
+        #articles-list.hidden {
+            display: none;
+        }
+        
+        /* Pulsante Torna agli articoli */
+        .back-to-articles {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(107, 142, 35, 0.1);
+            color: #8fbc8f;
+            text-decoration: none;
+            padding: 0.7rem 1.2rem;
+            border-radius: 10px;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .back-to-articles:hover {
+            background: rgba(107, 142, 35, 0.2);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <header role="banner">
+        <nav class="navbar" role="navigation" aria-label="Menu principale">
+            <a href="index.html" class="logo" aria-label="ITAR Regiment - Torna alla home">
+                <div class="logo-icon" aria-hidden="true">
+                    <svg width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="8" height="16" fill="#009246"/>
+                        <rect x="8" width="8" height="16" fill="#FFFFFF"/>
+                        <rect x="16" width="8" height="16" fill="#CE2B37"/>
+                    </svg>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">ITAR</span>
+                    <span class="logo-sub">COLONIAL</span>
+                </div>
+            </a>
+            
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="index.html#operazioni" class="nav-link">Operazioni</a></li>
+                <li><a href="index.html#chi-siamo" class="nav-link">Chi Siamo</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li><a href="index.html#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#" class="nav-link nav-cta" onclick="window.open('https://discord.gg/PjBqEg2ZK3', '_blank')" role="button">Discord</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-container">
+        <!-- Blog Header -->
+        <div class="blog-header">
+            <h1 class="blog-title">Blog ITAR Colonial</h1>
+            <h2 class="blog-subtitle">Guide, Strategie e Storie dal Fronte</h2>
+            <p class="blog-description">Il blog ufficiale del Reggimento ITAR, con articoli, guide e strategie per Foxhole in italiano. Scopri i segreti dei Colonial e unisciti alla più grande community italiana di Foxhole.</p>
+        </div>
+
+        <!-- Articoli principali -->
+        <div class="articles-section" id="articles-list">
+            <!-- Articolo in Evidenza -->
+            <article class="featured-article">
+                <span class="featured-tag">IN EVIDENZA</span>
+                <img src="ScreenShot00007.png" alt="Soldati Colonial di Foxhole in battaglia - vista panoramica del campo di battaglia" class="article-image">
+                <div class="article-content">
+                    <div class="article-meta">
+                        <span class="article-category">Guida Base</span>
+                        <span class="article-date"><span aria-hidden="true">📅</span> 10 Maggio 2025</span>
+                    </div>
+                    <h2 class="article-title">Guida Completa a Foxhole: Tutto Quello che Devi Sapere sul MMO Strategico</h2>
+                    <p class="article-excerpt">Foxhole è un MMO di guerra persistente che combina strategia, lavoro di squadra e combattimento in un mondo sandbox. Scopri come iniziare a giocare, le fazioni, le meccaniche principali e perché unirti ai Colonial italiani del Reggimento ITAR.</p>
+                    <a href="#" class="read-more" onclick="showArticle('foxhole-guida-completa'); return false;">
+                        Leggi l'articolo completo
+                        <span aria-hidden="true">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Lista Articoli -->
+            <div class="article-list">
+                <!-- Articolo 2 -->
+                <article class="article-card">
+                    <div class="card-image-container">
+                        <img src="ScreenShot00006.png" alt="Carri armati Colonial di Foxhole in formazione tattica" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="article-category">Strategie</span>
+                            <span class="article-date"><span aria-hidden="true">📅</span> 15 Maggio 2025</span>
+                        </div>
+                        <h2 class="card-title">Le 5 Migliori Strategie Colonial per Vincere in Foxhole</h2>
+                        <p class="card-excerpt">Una guida avanzata alle tattiche più efficaci per la fazione Colonial. Dalla gestione della logistica alle operazioni militari coordinate, scopri come dominare il campo di battaglia.</p>
+                        <a href="#" class="read-more" onclick="showArticle('strategie-colonial'); return false;">
+                            Leggi l'articolo
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Articolo 3 -->
+                <article class="article-card">
+                    <div class="card-image-container">
+                        <img src="e4uv57nuxip91.webp" alt="Base logistica Colonial ben organizzata in Foxhole" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="article-category">Tutorial</span>
+                            <span class="article-date"><span aria-hidden="true">📅</span> 1 Maggio 2025</span>
+                        </div>
+                        <h2 class="card-title">Guida alla Logistica in Foxhole: Come Rifornire il Fronte</h2>
+                        <p class="card-excerpt">La logistica è la spina dorsale di ogni esercito in Foxhole. Impara come estrarre risorse, produrre equipaggiamento e trasportare rifornimenti in modo efficiente per supportare le tue truppe.</p>
+                        <a href="#" class="read-more" onclick="showArticle('guida-logistica'); return false;">
+                            Leggi l'articolo
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Articolo 4 -->
+                <article class="article-card">
+                    <div class="card-image-container">
+                        <img src="ScreenShot00007.png" alt="Soldati ITAR in azione durante una battaglia in Foxhole" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="article-category">Reportage</span>
+                            <span class="article-date"><span aria-hidden="true">📅</span> 25 Aprile 2025</span>
+                        </div>
+                        <h2 class="card-title">La Grande Battaglia di Endless Shore: Come ITAR ha Cambiato le Sorti della Guerra</h2>
+                        <p class="card-excerpt">Il racconto dettagliato della storica battaglia di Endless Shore, dove il Reggimento ITAR ha coordinato una massiccia controffensiva che ha ribaltato le sorti del conflitto contro i Warden.</p>
+                        <a href="#" class="read-more" onclick="showArticle('battaglia-endless-shore'); return false;">
+                            Leggi l'articolo
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Articolo 5 -->
+                <article class="article-card">
+                    <div class="card-image-container">
+                        <img src="sfondo-body.jpg" alt="Soldati che collaborano in Foxhole" class="card-image">
+                    </div>
+                    <div class="card-content">
+                        <div class="article-meta">
+                            <span class="article-category">Community</span>
+                            <span class="article-date"><span aria-hidden="true">📅</span> 18 Aprile 2025</span>
+                        </div>
+                        <h2 class="card-title">Intervista al Comandante ITAR: La Storia e il Futuro del Reggimento Italiano</h2>
+                        <p class="card-excerpt">Un'intervista esclusiva con il fondatore e comandante del Reggimento ITAR. Scopri come è nato il clan, i momenti più memorabili e i piani futuri per la community italiana di Foxhole.</p>
+                        <a href="#" class="read-more" onclick="showArticle('intervista-comandante'); return false;">
+                            Leggi l'articolo
+                            <span aria-hidden="true">→</span>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <!-- Articoli completi (nascosti inizialmente) -->
+        <div id="full-article" class="single-article">
+            <!-- Questo contenuto verrà riempito dinamicamente -->
+            <a href="#" class="back-to-articles" onclick="hideArticle(); return false;">
+                <span aria-hidden="true">←</span> Torna agli articoli
+            </a>
+            <div id="article-container">
+                <!-- Il contenuto dell'articolo verrà inserito qui -->
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <!-- Categorie Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Categorie</h3>
+                <ul class="categories-list">
+                    <li class="category-item">
+                        <a href="#" class="category-link">
+                            Guide Base
+                            <span class="category-count">3</span>
+                        </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-link">
+                            Strategie
+                            <span class="category-count">7</span>
+                        </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-link">
+                            Tutorial
+                            <span class="category-count">5</span>
+                        </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-link">
+                            Reportage
+                            <span class="category-count">4</span>
+                        </a>
+                    </li>
+                    <li class="category-item">
+                        <a href="#" class="category-link">
+                            Community
+                            <span class="category-count">2</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Post Popolari Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Articoli Popolari</h3>
+                <ul class="popular-posts">
+                    <li class="popular-post">
+                        <div class="post-thumb">
+                            <img src="ScreenShot00007.png" alt="Soldati Colonial in battaglia">
+                        </div>
+                        <div class="post-details">
+                            <a href="#" class="post-link" onclick="showArticle('foxhole-guida-completa'); return false;">Guida Completa a Foxhole: Tutto Quello che Devi Sapere</a>
+                            <span class="post-date">10 Maggio 2025</span>
+                        </div>
+                    </li>
+                    <li class="popular-post">
+                        <div class="post-thumb">
+                            <img src="ScreenShot00006.png" alt="Carri armati Colonial">
+                        </div>
+                        <div class="post-details">
+                            <a href="#" class="post-link" onclick="showArticle('strategie-colonial'); return false;">Le 5 Migliori Strategie Colonial per Vincere</a>
+                            <span class="post-date">15 Maggio 2025</span>
+                        </div>
+                    </li>
+                    <li class="popular-post">
+                        <div class="post-thumb">
+                            <img src="e4uv57nuxip91.webp" alt="Base logistica">
+                        </div>
+                        <div class="post-details">
+                            <a href="#" class="post-link" onclick="showArticle('guida-logistica'); return false;">Guida alla Logistica in Foxhole</a>
+                            <span class="post-date">1 Maggio 2025</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Subscribe Widget -->
+            <div class="sidebar-widget subscribe-widget">
+                <h3 class="widget-title">Rimani Aggiornato</h3>
+                <p>Iscriviti alla nostra newsletter per ricevere gli ultimi aggiornamenti sul mondo di Foxhole e le attività del Reggimento ITAR.</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="La tua email" class="form-input" required>
+                    <button type="submit" class="form-button">Iscriviti</button>
+                </form>
+            </div>
+
+            <!-- Discord Widget -->
+            <div class="sidebar-widget">
+                <h3 class="widget-title">Unisciti a Noi</h3>
+                <p style="margin-bottom: 1.5rem;">Entra nel nostro server Discord per giocare insieme al clan Foxhole Italia più grande e organizzato!</p>
+                <a href="#" class="form-button" style="display: block; text-align: center;" onclick="window.open('https://discord.gg/PjBqEg2ZK3', '_blank')">
+                    Discord ITAR
+                </a>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Chi Siamo</h3>
+                <p>ITAR è il più grande reggimento italiano Colonial di Foxhole. Uniamo strategia, divertimento e spirito di squadra per dominare sui campi di battaglia.</p>
+                <p>Siamo orgogliosi di rappresentare i colori italiani nel mondo di Foxhole, sempre pronti a combattere per la vittoria Colonial.</p>
+            </div>
+            <div class="footer-column">
+                <h3>Link Utili</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#operazioni">Operazioni</a></li>
+                    <li><a href="index.html#chi-siamo">Chi Siamo</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Categorie Blog</h3>
+                <ul>
+                    <li><a href="#">Guide Base</a></li>
+                    <li><a href="#">Strategie</a></li>
+                    <li><a href="#">Tutorial</a></li>
+                    <li><a href="#">Reportage</a></li>
+                    <li><a href="#">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Contattaci</h3>
+                <ul>
+                    <li><a href="#" onclick="window.open('https://discord.gg/PjBqEg2ZK3', '_blank')"><span aria-hidden="true">🎮</span> Discord</a></li>
+                    <li><a href="mailto:itar.regiment@gmail.com"><span aria-hidden="true">📧</span> Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 ITAR Regiment - Il Tuo Clan Foxhole Italiano e Reggimento Colonial di riferimento in Foxhole Italia.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Funzione per mostrare un articolo completo
+        function showArticle(articleId) {
+            // Nascondi la lista degli articoli
+            document.getElementById('articles-list').classList.add('hidden');
+            
+            // Mostra il contenitore dell'articolo completo
+            const fullArticle = document.getElementById('full-article');
+            fullArticle.classList.add('active');
+            
+            // Carica il contenuto dell'articolo in base all'ID
+            const articleContainer = document.getElementById('article-container');
+            
+            if (articleId === 'foxhole-guida-completa') {
+                articleContainer.innerHTML = `
+                    <article class="article-header">
+                        <div class="article-meta">
+                            <span class="article-category">Guida Base</span>
+                            <span class="article-date"><span aria-hidden="true">📅</span> 10 Maggio 2025</span>
+                        </div>
+                        <h1 class="article-title">Guida Completa a Foxhole: Tutto Quello che Devi Sapere sul MMO Strategico</h1>
+                    </article>
+                    
+                    <div class="article-body">
+                        <p>Nel vasto panorama dei giochi di guerra online, <strong>Foxhole</strong> si distingue come un'esperienza unica che fonde strategia militare, cooperazione di massa e un mondo persistente in continua evoluzione. Se sei nuovo a questo titolo o stai considerando di unirti al campo di battaglia, questa guida completa ti fornirà tutto ciò che devi sapere per iniziare al meglio la tua avventura con il Reggimento ITAR, la più grande community italiana di Foxhole dedicata alla fazione Colonial.</p>
+                        
+                        <img src="ScreenShot00007.png" alt="Panoramica di una battaglia in Foxhole con truppe Colonial in azione">
+                        
+                        <h2>Cos'è Foxhole: Un MMO di Guerra Persistente e Unico</h2>
+                        
+                        <p>Foxhole è un <strong>MMO di guerra persistente</strong> sviluppato da Siege Camp (precedentemente noto come Clapfoot), che offre un'esperienza di combattimento su larga scala ambientata in un mondo ispirato alle guerre mondiali del XX secolo. A differenza di molti altri giochi di guerra, Foxhole non si concentra soltanto sul combattimento individuale, ma abbraccia tutti gli aspetti di un conflitto militare: dalla produzione di equipaggiamento alla logistica, dalla costruzione di fortificazioni alle operazioni militari coordinate.</p>
+                        
+                        <p>Ciò che rende Foxhole veramente speciale è il suo <strong>mondo persistente</strong>. Le guerre in Foxhole possono durare settimane o addirittura mesi, con migliaia di giocatori che contribuiscono al conflitto in vari modi. Ogni veicolo che vedi sul campo di battaglia, ogni proiettile sparato, ogni fortificazione costruita è stato creato manualmente dai giocatori utilizzando risorse raccolte nel mondo di gioco. Non ci sono "spawn" magici di equipaggiamento o veicoli: tutto deve essere prodotto, trasportato e mantenuto dai giocatori stessi.</p>
+                        
+                        <h2>Le Fazioni di Foxhole: Colonial vs Warden</h2>
+                        
+                        <p>In Foxhole, i giocatori si schierano con una delle due fazioni in guerra:</p>
+                        
+                        <h3>Colonial Legion (La Nostra Fazione)</h3>
+                        
+                        <p>I <strong>Colonial</strong>, la fazione che rappresentiamo come Reggimento ITAR, sono ispirati visivamente alle forze alleate della Seconda Guerra Mondiale, in particolare agli eserciti americano e italiano. Tecnologicamente, i Colonial tendono ad avere equipaggiamento più leggero, mobile e prodotto in massa, sacrificando talvolta la potenza bruta per la flessibilità tattica.</p>
+                        
+                        <p>La dottrina Colonial privilegia la mobilità, la produzione efficiente e gli attacchi rapidi. I nostri veicoli sono generalmente più veloci ma meno corazzati rispetto ai loro equivalenti Warden, e le nostre armi tendono ad avere un rateo di fuoco più elevato ma minore potenza per colpo.</p>
+                        
+                        <h3>Warden Empire</h3>
+                        
+                        <p>I <strong>Warden</strong>, i nostri nemici, si ispirano visivamente alle potenze dell'Asse, con uniformi blu che ricordano lo stile francese e tedesco della prima metà del XX secolo. La tecnologia Warden tende ad essere più pesante e robusta, privilegiando potenza di fuoco e corazzatura rispetto alla mobilità.</p>
+                        
+                        <p>La dottrina Warden si concentra sulla difesa efficace, veicoli potenti ma lenti, e armi ad alto impatto. I loro carri armati sono generalmente più corazzati e potenti, ma meno mobili dei loro equivalenti Colonial.</p>
+                        
+                        <blockquote>
+                            "La vera forza dei Colonial non sta nel nostro equipaggiamento, ma nella nostra abilità di mobilitare rapidamente, adattarci e colpire dove il nemico è più debole. La velocità e la cooperazione sono le nostre armi più potenti." - Comandante ITAR
+                        </blockquote>
+                        
+                        <h2>Le Meccaniche di Gioco Principali</h2>
+                        
+                        <p>Foxhole offre una vasta gamma di meccaniche di gioco che simulano i vari aspetti di un conflitto militare. Ecco le principali che devi conoscere:</p>
+                        
+                        <h3>Combattimento</h3>
+                        
+                        <p>Il combattimento in Foxhole è realizzato con visuale dall'alto (top-down) e richiede puntamento manuale. A differenza di altri giochi dove statistiche del personaggio o livelli determinano la potenza in battaglia, in Foxhole conta solo l'abilità del giocatore e l'equipaggiamento disponibile. Questo significa che anche un nuovo giocatore può essere efficace in combattimento con la giusta strategia.</p>
+                        
+                        <p>Le armi variano dai fucili base alle mitragliatrici, dai lanciarazzi all'artiglieria pesante. Ogni arma ha vantaggi e svantaggi specifici, e la scelta dell'equipaggiamento giusto per la situazione è fondamentale per il successo.</p>
+                        
+                        <h3>Logistica ("Logi")</h3>
+                        
+                        <p>La <strong>logistica</strong> è considerata la spina dorsale di Foxhole. Questo processo include:</p>
+                        
+                        <ul>
+                            <li><strong>Estrazione di risorse</strong>: I giocatori raccolgono materie prime come salvage (rottami), components e sulfur dalle miniere sparse per la mappa.</li>
+                            <li><strong>Raffinazione</strong>: Le materie prime vengono raffinate in materiali utilizzabili come Basic Materials (Bmats), Explosive Materials (Emats) e altri.</li>
+                            <li><strong>Produzione</strong>: I materiali raffinati vengono trasformati in equipaggiamento, munizioni, veicoli e strutture nelle fabbriche.</li>
+                            <li><strong>Trasporto</strong>: Tutto l'equipaggiamento prodotto deve essere trasportato fisicamente al fronte utilizzando camion, navi o treni.</li>
+                        </ul>
+                        
+                        <p>Nel Reggimento ITAR, abbiamo squadre specializzate in logistica che garantiscono un flusso costante di rifornimenti per le nostre operazioni di combattimento. La cooperazione tra squadre logistiche e di combattimento è essenziale per la vittoria.</p>
+                        
+                        <h3>Costruzione</h3>
+                        
+                        <p>La costruzione di basi e fortificazioni è un altro aspetto cruciale di Foxhole. I giocatori possono erigere trincee, bunker, muri, torrette difensive e intere basi. Queste strutture difensive sono vitali per proteggere territori conquistati e risorse strategiche.</p>
+                        
+                        <p>Le basi più avanzate includono fabbriche di munizioni, garage per veicoli, ospedali da campo e centri di comando, formando vere e proprie cittadelle militari che servono come punti di respawn e hub logistici.</p>
+                        
+                        <h3>Intelligenza e Ricognizione</h3>
+                        
+                        <p>L'informazione è potere in Foxhole. Conoscere i movimenti nemici, le loro fortificazioni e i punti deboli è essenziale per pianificare operazioni efficaci. I giocatori possono utilizzare:</p>
+                        
+                        <ul>
+                            <li><strong>Radio Backpacks</strong>: Per vedere nemici e strutture oltre la normale linea visiva</li>
+                            <li><strong>Binocoli</strong>: Per osservare a distanza senza essere individuati</li>
+                            <li><strong>Mappe di intelligenza</strong>: Condivise tra i membri della fazione per coordinare le operazioni</li>
+                            <li><strong>Infiltrazione</strong>: Piccoli gruppi di ricognizione possono penetrare dietro le linee nemiche per raccogliere informazioni</li>
+                        </ul>
+                        
+                        <h2>Ruoli Specializzati in Foxhole</h2>
+                        
+                        <p>Uno degli aspetti più affascinanti di Foxhole è la specializzazione dei ruoli. All'interno del Reggimento ITAR, incoraggiamo i giocatori a specializzarsi in ruoli specifici che meglio si adattano al loro stile di gioco:</p>
+                        
+                        <h3>Fanteria</h3>
+                        
+                        <p>Il nucleo di ogni operazione militare. I fanti sono versatili e possono adattarsi rapidamente a diverse situazioni di combattimento. Come fanteria, potrai:</p>
+                        
+                        <ul>
+                            <li>Partecipare ad assalti coordinati contro posizioni nemiche</li>
+                            <li>Difendere fortificazioni da attacchi nemici</li>
+                            <li>Supportare operazioni di veicoli con protezione anti-fanteria</li>
+                            <li>Condurre incursioni dietro le linee nemiche</li>
+                        </ul>
+                        
+                        <h3>Logistica</h3>
+                        
+                        <p>I logisti sono i veri eroi silenziosi di Foxhole. Senza un sistema logistico efficiente, anche l'esercito più potente si fermerebbe. Come logista, sarai responsabile di:</p>
+                        
+                        <ul>
+                            <li>Raccogliere e raffinare risorse</li>
+                            <li>Produrre equipaggiamento e veicoli</li>
+                            <li>Trasportare rifornimenti al fronte</li>
+                            <li>Gestire l'inventario delle basi e rispondere alle richieste di rifornimenti</li>
+                        </ul>
+                        
+                        <h3>Equipaggi dei Veicoli</h3>
+                        
+                        <p>I veicoli sono forze moltiplicatrici sul campo di battaglia. Come membro di un equipaggio potrai operare:</p>
+                        
+                        <ul>
+                            <li><strong>Carri armati</strong>: Potenti veicoli da combattimento che richiedono un equipaggio coordinato</li>
+                            <li><strong>Artiglieria mobile</strong>: Per bombardamenti a lunga distanza</li>
+                            <li><strong>Veicoli da trasporto truppe</strong>: Per spostamenti rapidi della fanteria</li>
+                            <li><strong>Navi da guerra</strong>: Per operazioni navali e bombardamenti costieri</li>
+                        </ul>
+                        
+                        <h3>Ingegneri</h3>
+                        
+                        <p>Gli ingegneri pianificano e costruiscono le fortificazioni difensive e le infrastrutture. Come ingegnere, ti occuperai di:</p>
+                        
+                        <ul>
+                            <li>Progettare e costruire complessi difensivi</li>
+                            <li>Gestire i sistemi di difesa come torrette e bunker</li>
+                            <li>Costruire e mantenere infrastrutture come ponti e ferrovie</li>
+                            <li>Creare campi minati e trappole per rallentare l'avanzata nemica</li>
+                        </ul>
+                        
+                        <h3>Medici</h3>
+                        
+                        <p>I medici mantengono le truppe in combattimento. Come medico:</p>
+                        
+                        <ul>
+                            <li>Rianimare i compagni caduti sul campo di battaglia</li>
+                            <li>Curare i feriti per riportarli rapidamente in azione</li>
+                            <li>Gestire ospedali da campo</li>
+                            <li>Supportare operazioni offensive minimizzando le perdite</li>
+                        </ul>
+                        
+                        <h3>Comandanti</h3>
+                        
+                        <p>I comandanti coordinano le operazioni e sviluppano strategie. Nel Reggimento ITAR, i comandanti sono selezionati in base all'esperienza e alla capacità di leadership. Come comandante:</p>
+                        
+                        <ul>
+                            <li>Pianificare operazioni militari</li>
+                            <li>Coordinare i diversi reparti (fanteria, corazzati, artiglieria)</li>
+                            <li>Gestire le risorse e definire le priorità</li>
+                            <li>Mantenere la comunicazione con altri reggimenti alleati</li>
+                        </ul>
+                        
+                        <h2>Perché Unirti ai Colonial e al Reggimento ITAR</h2>
+                        
+                        <p>Il Reggimento ITAR è la più grande community italiana dedicata alla fazione Colonial in Foxhole. Ecco perché dovresti unirti a noi:</p>
+                        
+                        <h3>Comunità Attiva e Accogliente</h3>
+                        
+                        <p>Con oltre 100 membri attivi, ITAR offre un ambiente amichevole dove puoi connetterti con altri giocatori italiani appassionati di Foxhole. La nostra comunità è inclusiva e accoglie giocatori di tutti i livelli di esperienza, dai veterani ai nuovi arrivati.</p>
+                        
+                        <h3>Organizzazione e Struttura</h3>
+                        
+                        <p>ITAR è organizzato in squadre specializzate, ognuna con i propri leader e obiettivi. Questa struttura permette operazioni coordinate ed efficienti, massimizzando l'impatto della nostra presenza sul campo di battaglia.</p>
+                        
+                        <h3>Formazione e Supporto</h3>
+                        
+                        <p>Offriamo sessioni di addestramento per i nuovi membri, dove imparerai le meccaniche di base del gioco e le tattiche avanzate. I nostri veterani sono sempre disponibili per rispondere a domande e fornire supporto.</p>
+                        
+                        <h3>Operazioni Regolari</h3>
+                        
+                        <p>Organizziamo operazioni militari regolari, dalle piccole incursioni dietro le linee nemiche alle grandi offensive coordinate con altri reggimenti Colonial. Partecipando a queste operazioni, vivrai l'esperienza Foxhole al suo massimo potenziale.</p>
+                        
+                        <h3>Prestigio e Riconoscimento</h3>
+                        
+                        <p>ITAR è riconosciuto come uno dei reggimenti più efficaci della fazione Colonial. Le nostre operazioni hanno spesso cambiato le sorti di intere guerre, e il nostro nome è rispettato sia dagli alleati che dai nemici.</p>
+                        
+                        <h2>Come Iniziare a Giocare a Foxhole</h2>
+                        
+                        <p>Se sei pronto a unirti al campo di battaglia, ecco i passi da seguire:</p>
+                        
+                        <h3>1. Acquistare il Gioco</h3>
+                        
+                        <p>Foxhole è disponibile su Steam al prezzo di 29,99€. Il gioco riceve aggiornamenti regolari che aggiungono nuovi contenuti e migliorano l'esperienza complessiva.</p>
+                        
+                        <h3>2. Configurazione Iniziale</h3>
+                        
+                        <p>Dopo l'installazione, ti consigliamo di:</p>
+                        
+                        <ul>
+                            <li>Completare il tutorial incluso nel gioco per familiarizzare con i controlli di base</li>
+                            <li>Regolare le impostazioni grafiche e i keybindings secondo le tue preferenze</li>
+                            <li>Verificare che il tuo microfono funzioni correttamente per la comunicazione vocale in-game</li>
+                        </ul>
+                        
+                        <h3>3. Unirti al Reggimento ITAR</h3>
+                        
+                        <p>Il modo migliore per unirti a noi è attraverso il nostro server Discord. Una volta nel server:</p>
+                        
+                        <ul>
+                            <li>Presentati nel canale dedicato ai nuovi membri</li>
+                            <li>Un ufficiale ti contatterà per guidarti nel processo di reclutamento</li>
+                            <li>Riceverai i ruoli appropriati e l'accesso ai canali del reggimento</li>
+                            <li>Potrai partecipare alla prossima sessione di orientamento per nuovi membri</li>
+                        </ul>
+                        
+                        <h3>4. Scegliere un Ruolo</h3>
+                        
+                        <p>Come nuovo membro, ti incoraggiamo a provare diversi ruoli per trovare quello che meglio si adatta al tuo stile di gioco. I nostri ufficiali possono consigliarti in base alle tue preferenze e alle esigenze attuali del reggimento.</p>
+                        
+                        <h3>5. Partecipare alle Operazioni</h3>
+                        
+                        <p>Una volta completato l'orientamento, potrai partecipare alle operazioni regolari del reggimento. Queste operazioni sono annunciate nel nostro Discord e offrono un'ottima opportunità per mettere in pratica ciò che hai imparato.</p>
+                        
+                        <h2>Terminologia Essenziale di Foxhole</h2>
+                        
+                        <p>Per concludere questa guida, ecco alcuni termini comuni che sentirai frequentemente durante le operazioni:</p>
+                        
+                        <ul>
+                            <li><strong>Logi</strong>: Abbreviazione di "logistica", si riferisce a tutte le attività di supporto come raccolta risorse, produzione e trasporto.</li>
+                            <li><strong>FOB</strong> (Forward Operating Base): Una base avanzata vicino alla linea del fronte.</li>
+                            <li><strong>BB</strong> (Border Base): Base temporanea che può essere costruita ai confini tra regioni contestate.</li>
+                            <li><strong>PvE</strong> (Player vs Environment): Attività di combattimento contro strutture nemiche invece che contro giocatori.</li>
+                            <li><strong>QRF</strong> (Quick Reaction Force): Una squadra pronta a rispondere rapidamente a emergenze o incursioni nemiche.</li>
+                            <li><strong>OP</strong> (Observation Post): Postazione avanzata utilizzata principalmente per la ricognizione.</li>
+                            <li><strong>Partisan</strong>: Operazioni di guerriglia dietro le linee nemiche, spesso mirate a interrompere le linee di rifornimento.</li>
+                            <li><strong>Garrison</strong>: Strutture difensive automatizzate che proteggono un'area quando non ci sono giocatori presenti.</li>
+                        </ul>
+                        
+                        <h2>Conclusione: L'Inizio della Tua Avventura Colonial</h2>
+                        
+                        <p>Foxhole offre un'esperienza di guerra unica che va ben oltre il semplice combattimento. È un gioco di cooperazione, strategia e persistenza, dove ogni giocatore può fare la differenza indipendentemente dal ruolo scelto.</p>
+                        
+                        <p>Unendoti al Reggimento ITAR, non solo entrerai a far parte della più grande community italiana di Foxhole, ma avrai anche l'opportunità di contribuire a un conflitto in continua evoluzione, creare legami duraturi con altri giocatori e vivere momenti epici che ricorderai a lungo.</p>
+                        
+                        <p>Ti aspettiamo sul campo di battaglia, soldato. Per la gloria Colonial! 🟢</p>
+                        
+                        <div class="article-tags">
+                            <a href="#" class="article-tag">foxhole</a>
+                            <a href="#" class="article-tag">guida</a>
+                            <a href="#" class="article-tag">colonial</a>
+                            <a href="#" class="article-tag">mmo</a>
+                            <a href="#" class="article-tag">strategia</a>
+                            <a href="#" class="article-tag">itar</a>
+                        </div>
+                        
+                        <div class="article-author">
+                            <div class="author-avatar">
+                                <img src="icona.ico" alt="Avatar del Comandante ITAR">
+                            </div>
+                            <div class="author-info">
+                                <h3 class="author-name">Comandante ITAR</h3>
+                                <p class="author-bio">Fondatore e leader del Reggimento ITAR, veterano di Foxhole con oltre 3000 ore di gioco. Specializzato in strategie Colonial e operazioni di larga scala.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="related-posts">
+                            <h3 class="related-title">Articoli Correlati</h3>
+                            <div class="related-grid">
+                                <a href="#" class="related-card" onclick="showArticle('strategie-colonial'); return false;">
+                                    <img src="ScreenShot00006.png" alt="Carri armati Colonial in formazione" class="related-image">
+                                    <div class="related-content">
+                                        <h4 class="related-card-title">Le 5 Migliori Strategie Colonial per Vincere in Foxhole</h4>
+                                    </div>
+                                </a>
+                                <a href="#" class="related-card" onclick="showArticle('guida-logistica'); return false;">
+                                    <img src="e4uv57nuxip91.webp" alt="Base logistica Colonial" class="related-image">
+                                    <div class="related-content">
+                                        <h4 class="related-card-title">Guida alla Logistica in Foxhole: Come Rifornire il Fronte</h4>
+                                    </div>
+                                </a>
+                                <a href="#" class="related-card" onclick="showArticle('intervista-comandante'); return false;">
+                                    <img src="sfondo-body.jpg" alt="Soldati che collaborano in Foxhole" class="related-image">
+                                    <div class="related-content">
+                                        <h4 class="related-card-title">Intervista al Comandante ITAR: La Storia e il Futuro del Reggimento Italiano</h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else if (articleId === 'strategie-colonial') {
+                // Contenuto per l'articolo sulle strategie Colonial
+                articleContainer.innerHTML = `
+                    <article class="article-header">
+                        <div class="article-meta">
+                            <span class="article-category">Strategie</span>
+                            <span class="article-date"><span aria-hidden="true">📅</span> 15 Maggio 2025</span>
+                        </div>
+                        <h1 class="article-title">Le 5 Migliori Strategie Colonial per Vincere in Foxhole</h1>
+                    </article>
+                    
+                    <div class="article-body">
+                        <p>Le strategie avanzate per la fazione Colonial in Foxhole che ogni membro del Reggimento ITAR dovrebbe conoscere. Contenuto completo in arrivo presto!</p>
+                    </div>
+                `;
+            } else if (articleId === 'guida-logistica') {
+                // Contenuto per l'articolo sulla logistica
+                articleContainer.innerHTML = `
+                    <article class="article-header">
+                        <div class="article-meta">
+                            <span class="article-category">Tutorial</span>
+                            <span class="article-date"><span aria-hidden="true">📅</span> 1 Maggio 2025</span>
+                        </div>
+                        <h1 class="article-title">Guida alla Logistica in Foxhole: Come Rifornire il Fronte</h1>
+                    </article>
+                    
+                    <div class="article-body">
+                        <p>La guida definitiva alla logistica in Foxhole: come estrarre risorse, produrre equipaggiamento e mantenere le linee di rifornimento. Contenuto completo in arrivo presto!</p>
+                    </div>
+                `;
+            } else if (articleId === 'battaglia-endless-shore') {
+                // Contenuto per l'articolo sulla battaglia
+                articleContainer.innerHTML = `
+                    <article class="article-header">
+                        <div class="article-meta">
+                            <span class="article-category">Reportage</span>
+                            <span class="article-date"><span aria-hidden="true">📅</span> 25 Aprile 2025</span>
+                        </div>
+                        <h1 class="article-title">La Grande Battaglia di Endless Shore: Come ITAR ha Cambiato le Sorti della Guerra</h1>
+                    </article>
+                    
+                    <div class="article-body">
+                        <p>Il racconto dettagliato della storica battaglia di Endless Shore e del ruolo cruciale del Reggimento ITAR. Contenuto completo in arrivo presto!</p>
+                    </div>
+                `;
+            } else if (articleId === 'intervista-comandante') {
+                // Contenuto per l'intervista
+                articleContainer.innerHTML = `
+                    <article class="article-header">
+                        <div class="article-meta">
+                            <span class="article-category">Community</span>
+                            <span class="article-date"><span aria-hidden="true">📅</span> 18 Aprile 2025</span>
+                        </div>
+                        <h1 class="article-title">Intervista al Comandante ITAR: La Storia e il Futuro del Reggimento Italiano</h1>
+                    </article>
+                    
+                    <div class="article-body">
+                        <p>Un'intervista esclusiva con il fondatore e comandante del Reggimento ITAR. Contenuto completo in arrivo presto!</p>
+                    </div>
+                `;
+            }
+            
+            // Scorri fino all'inizio dell'articolo
+            window.scrollTo({
+                top: fullArticle.offsetTop - 100,
+                behavior: 'smooth'
+            });
+        }
+        
+        // Funzione per nascondere l'articolo e mostrare la lista
+        function hideArticle() {
+            document.getElementById('full-article').classList.remove('active');
+            document.getElementById('articles-list').classList.remove('hidden');
+            
+            // Scorri fino all'inizio della pagina
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
