@@ -9,7 +9,7 @@
     <link rel="icon" href="./icona.ico" sizes="any">
     
     <!-- SEO Meta Tags -->
-    <title>Blog Ufficiale ITAR | Articoli su Foxhole per la Community Italiana</title>
+    <title>Blog Ufficiale Foxhole ITAR | Articoli su Foxhole per la Community Italiana</title>
     <meta name="description" content="Scopri il mondo di Foxhole con il blog ufficiale del Reggimento ITAR. Guide, strategie, report di guerra e contenuti esclusivi per la community italiana di Foxhole. Entra nell'universo Colonial con il tuo clan italiano di riferimento!">
     <meta name="keywords" content="foxhole blog italiano, guide foxhole italiano, clan colonial foxhole, strategia foxhole, foxhole tutorial italiano, come giocare a foxhole, foxhole tattica, foxhole regiment italiano, foxhole italia, blog gaming italiano">
     <meta name="author" content="ITAR Regiment">
@@ -827,40 +827,6 @@
             color: rgba(255, 255, 255, 0.8);
         }
 
-        .article-navigation {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 4rem;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(107, 142, 35, 0.2);
-        }
-
-        .nav-previous, .nav-next {
-            max-width: 48%;
-        }
-
-        .nav-previous a, .nav-next a {
-            display: flex;
-            flex-direction: column;
-            color: #e3f2fd;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-
-        .nav-previous a:hover, .nav-next a:hover {
-            color: #8fbc8f;
-        }
-
-        .nav-label {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.6);
-            margin-bottom: 0.3rem;
-        }
-
-        .nav-title {
-            font-weight: 600;
-        }
-
         .related-posts {
             margin-top: 4rem;
         }
@@ -916,20 +882,6 @@
             color: #8fbc8f;
         }
 
-        /* Visualizzazione dell'articolo */
-        #full-article {
-            display: none;
-        }
-
-        #full-article.active {
-            display: block;
-        }
-
-        #articles-list.hidden {
-            display: none;
-        }
-        
-        /* Pulsante Torna agli articoli */
         .back-to-articles {
             display: inline-flex;
             align-items: center;
@@ -1000,7 +952,7 @@
                     </div>
                     <h2 class="article-title">Guida Completa a Foxhole: Tutto Quello che Devi Sapere sul MMO Strategico</h2>
                     <p class="article-excerpt">Foxhole è un MMO di guerra persistente che combina strategia, lavoro di squadra e combattimento in un mondo sandbox. Scopri come iniziare a giocare, le fazioni, le meccaniche principali e perché unirti ai Colonial italiani del Reggimento ITAR.</p>
-                    <a href="#" class="read-more" onclick="showArticle('foxhole-guida-completa'); return false;">
+                    <a href="blog/guida-completa-foxhole.html" class="read-more">
                         Leggi l'articolo completo
                         <span aria-hidden="true">→</span>
                     </a>
@@ -1021,7 +973,7 @@
                         </div>
                         <h2 class="card-title">Le 5 Migliori Strategie Colonial per Vincere in Foxhole</h2>
                         <p class="card-excerpt">Una guida avanzata alle tattiche più efficaci per la fazione Colonial. Dalla gestione della logistica alle operazioni militari coordinate, scopri come dominare il campo di battaglia.</p>
-                        <a href="#" class="read-more" onclick="showArticle('strategie-colonial'); return false;">
+                        <a href="blog/strategie-colonial.html" class="read-more">
                             Leggi l'articolo
                             <span aria-hidden="true">→</span>
                         </a>
@@ -1040,7 +992,7 @@
                         </div>
                         <h2 class="card-title">Guida alla Logistica in Foxhole: Come Rifornire il Fronte</h2>
                         <p class="card-excerpt">La logistica è la spina dorsale di ogni esercito in Foxhole. Impara come estrarre risorse, produrre equipaggiamento e trasportare rifornimenti in modo efficiente per supportare le tue truppe.</p>
-                        <a href="#" class="read-more" onclick="showArticle('guida-logistica'); return false;">
+                        <a href="blog/guida-logistica.html" class="read-more">
                             Leggi l'articolo
                             <span aria-hidden="true">→</span>
                         </a>
@@ -1059,7 +1011,7 @@
                         </div>
                         <h2 class="card-title">La Grande Battaglia di Endless Shore: Come ITAR ha Cambiato le Sorti della Guerra</h2>
                         <p class="card-excerpt">Il racconto dettagliato della storica battaglia di Endless Shore, dove il Reggimento ITAR ha coordinato una massiccia controffensiva che ha ribaltato le sorti del conflitto contro i Warden.</p>
-                        <a href="#" class="read-more" onclick="showArticle('battaglia-endless-shore'); return false;">
+                        <a href="blog/battaglia-endless-shore.html" class="read-more">
                             Leggi l'articolo
                             <span aria-hidden="true">→</span>
                         </a>
@@ -1078,23 +1030,12 @@
                         </div>
                         <h2 class="card-title">Intervista al Comandante ITAR: La Storia e il Futuro del Reggimento Italiano</h2>
                         <p class="card-excerpt">Un'intervista esclusiva con il fondatore e comandante del Reggimento ITAR. Scopri come è nato il clan, i momenti più memorabili e i piani futuri per la community italiana di Foxhole.</p>
-                        <a href="#" class="read-more" onclick="showArticle('intervista-comandante'); return false;">
+                        <a href="blog/intervista-comandante.html" class="read-more">
                             Leggi l'articolo
                             <span aria-hidden="true">→</span>
                         </a>
                     </div>
                 </article>
-            </div>
-        </div>
-
-        <!-- Articoli completi (nascosti inizialmente) -->
-        <div id="full-article" class="single-article">
-            <!-- Questo contenuto verrà riempito dinamicamente -->
-            <a href="#" class="back-to-articles" onclick="hideArticle(); return false;">
-                <span aria-hidden="true">←</span> Torna agli articoli
-            </a>
-            <div id="article-container">
-                <!-- Il contenuto dell'articolo verrà inserito qui -->
             </div>
         </div>
 
@@ -1146,7 +1087,7 @@
                             <img src="ScreenShot00007.png" alt="Soldati Colonial in battaglia">
                         </div>
                         <div class="post-details">
-                            <a href="#" class="post-link" onclick="showArticle('foxhole-guida-completa'); return false;">Guida Completa a Foxhole: Tutto Quello che Devi Sapere</a>
+                            <a href="blog/guida-completa-foxhole.html" class="post-link">Guida Completa a Foxhole: Tutto Quello che Devi Sapere</a>
                             <span class="post-date">10 Maggio 2025</span>
                         </div>
                     </li>
@@ -1155,7 +1096,7 @@
                             <img src="ScreenShot00006.png" alt="Carri armati Colonial">
                         </div>
                         <div class="post-details">
-                            <a href="#" class="post-link" onclick="showArticle('strategie-colonial'); return false;">Le 5 Migliori Strategie Colonial per Vincere</a>
+                            <a href="blog/strategie-colonial.html" class="post-link">Le 5 Migliori Strategie Colonial per Vincere</a>
                             <span class="post-date">15 Maggio 2025</span>
                         </div>
                     </li>
@@ -1164,7 +1105,7 @@
                             <img src="e4uv57nuxip91.webp" alt="Base logistica">
                         </div>
                         <div class="post-details">
-                            <a href="#" class="post-link" onclick="showArticle('guida-logistica'); return false;">Guida alla Logistica in Foxhole</a>
+                            <a href="blog/guida-logistica.html" class="post-link">Guida alla Logistica in Foxhole</a>
                             <span class="post-date">1 Maggio 2025</span>
                         </div>
                     </li>
@@ -1231,784 +1172,5 @@
             <p>&copy; 2025 ITAR Regiment - Il Tuo Clan Foxhole Italiano e Reggimento Colonial di riferimento in Foxhole Italia.</p>
         </div>
     </footer>
-
-    <script>
-        // Funzione per mostrare un articolo completo
-        function showArticle(articleId) {
-            // Nascondi la lista degli articoli
-            document.getElementById('articles-list').classList.add('hidden');
-            
-            // Mostra il contenitore dell'articolo completo
-            const fullArticle = document.getElementById('full-article');
-            fullArticle.classList.add('active');
-            
-            // Carica il contenuto dell'articolo in base all'ID
-            const articleContainer = document.getElementById('article-container');
-            
-            if (articleId === 'foxhole-guida-completa') {
-                articleContainer.innerHTML = `
-                    <article class="article-header">
-                        <div class="article-meta">
-                            <span class="article-category">Guida Base</span>
-                            <span class="article-date"><span aria-hidden="true">📅</span> 10 Maggio 2025</span>
-                        </div>
-                        <h1 class="article-title">Guida Completa a Foxhole: Tutto Quello che Devi Sapere sul MMO Strategico</h1>
-                    </article>
-                    
-                    <div class="article-body">
-                        <p>Nel vasto panorama dei giochi di guerra online, <strong>Foxhole</strong> si distingue come un'esperienza unica che fonde strategia militare, cooperazione di massa e un mondo persistente in continua evoluzione. Se sei nuovo a questo titolo o stai considerando di unirti al campo di battaglia, questa guida completa ti fornirà tutto ciò che devi sapere per iniziare al meglio la tua avventura con il Reggimento ITAR, la più grande community italiana di Foxhole dedicata alla fazione Colonial.</p>
-                        
-                        <img src="ScreenShot00007.png" alt="Panoramica di una battaglia in Foxhole con truppe Colonial in azione">
-                        
-                        <h2>Cos'è Foxhole: Un MMO di Guerra Persistente e Unico</h2>
-                        
-                        <p>Foxhole è un <strong>MMO di guerra persistente</strong> sviluppato da Siege Camp (precedentemente noto come Clapfoot), che offre un'esperienza di combattimento su larga scala ambientata in un mondo ispirato alle guerre mondiali del XX secolo. A differenza di molti altri giochi di guerra, Foxhole non si concentra soltanto sul combattimento individuale, ma abbraccia tutti gli aspetti di un conflitto militare: dalla produzione di equipaggiamento alla logistica, dalla costruzione di fortificazioni alle operazioni militari coordinate.</p>
-                        
-                        <p>Ciò che rende Foxhole veramente speciale è il suo <strong>mondo persistente</strong>. Le guerre in Foxhole possono durare settimane o addirittura mesi, con migliaia di giocatori che contribuiscono al conflitto in vari modi. Ogni veicolo che vedi sul campo di battaglia, ogni proiettile sparato, ogni fortificazione costruita è stato creato manualmente dai giocatori utilizzando risorse raccolte nel mondo di gioco. Non ci sono "spawn" magici di equipaggiamento o veicoli: tutto deve essere prodotto, trasportato e mantenuto dai giocatori stessi.</p>
-                        
-                        <h2>Le Fazioni di Foxhole: Colonial vs Warden</h2>
-                        
-                        <p>In Foxhole, i giocatori si schierano con una delle due fazioni in guerra:</p>
-                        
-                        <h3>Colonial Legion (La Nostra Fazione)</h3>
-                        
-                        <p>I <strong>Colonial</strong>, la fazione che rappresentiamo come Reggimento ITAR, sono ispirati visivamente alle forze alleate della Seconda Guerra Mondiale, in particolare agli eserciti americano e italiano. Tecnologicamente, i Colonial tendono ad avere equipaggiamento più leggero, mobile e prodotto in massa, sacrificando talvolta la potenza bruta per la flessibilità tattica.</p>
-                        
-                        <p>La dottrina Colonial privilegia la mobilità, la produzione efficiente e gli attacchi rapidi. I nostri veicoli sono generalmente più veloci ma meno corazzati rispetto ai loro equivalenti Warden, e le nostre armi tendono ad avere un rateo di fuoco più elevato ma minore potenza per colpo.</p>
-                        
-                        <h3>Warden Empire</h3>
-                        
-                        <p>I <strong>Warden</strong>, i nostri nemici, si ispirano visivamente alle potenze dell'Asse, con uniformi blu che ricordano lo stile francese e tedesco della prima metà del XX secolo. La tecnologia Warden tende ad essere più pesante e robusta, privilegiando potenza di fuoco e corazzatura rispetto alla mobilità.</p>
-                        
-                        <p>La dottrina Warden si concentra sulla difesa efficace, veicoli potenti ma lenti, e armi ad alto impatto. I loro carri armati sono generalmente più corazzati e potenti, ma meno mobili dei loro equivalenti Colonial.</p>
-                        
-                        <blockquote>
-                            "La vera forza dei Colonial non sta nel nostro equipaggiamento, ma nella nostra abilità di mobilitare rapidamente, adattarci e colpire dove il nemico è più debole. La velocità e la cooperazione sono le nostre armi più potenti." - Comandante ITAR
-                        </blockquote>
-                        
-                        <h2>Le Meccaniche di Gioco Principali</h2>
-                        
-                        <p>Foxhole offre una vasta gamma di meccaniche di gioco che simulano i vari aspetti di un conflitto militare. Ecco le principali che devi conoscere:</p>
-                        
-                        <h3>Combattimento</h3>
-                        
-                        <p>Il combattimento in Foxhole è realizzato con visuale dall'alto (top-down) e richiede puntamento manuale. A differenza di altri giochi dove statistiche del personaggio o livelli determinano la potenza in battaglia, in Foxhole conta solo l'abilità del giocatore e l'equipaggiamento disponibile. Questo significa che anche un nuovo giocatore può essere efficace in combattimento con la giusta strategia.</p>
-                        
-                        <p>Le armi variano dai fucili base alle mitragliatrici, dai lanciarazzi all'artiglieria pesante. Ogni arma ha vantaggi e svantaggi specifici, e la scelta dell'equipaggiamento giusto per la situazione è fondamentale per il successo.</p>
-                        
-                        <h3>Logistica ("Logi")</h3>
-                        
-                        <p>La <strong>logistica</strong> è considerata la spina dorsale di Foxhole. Questo processo include:</p>
-                        
-                        <ul>
-                            <li><strong>Estrazione di risorse</strong>: I giocatori raccolgono materie prime come salvage (rottami), components e sulfur dalle miniere sparse per la mappa.</li>
-                            <li><strong>Raffinazione</strong>: Le materie prime vengono raffinate in materiali utilizzabili come Basic Materials (Bmats), Explosive Materials (Emats) e altri.</li>
-                            <li><strong>Produzione</strong>: I materiali raffinati vengono trasformati in equipaggiamento, munizioni, veicoli e strutture nelle fabbriche.</li>
-                            <li><strong>Trasporto</strong>: Tutto l'equipaggiamento prodotto deve essere trasportato fisicamente al fronte utilizzando camion, navi o treni.</li>
-                        </ul>
-                        
-                        <p>Nel Reggimento ITAR, abbiamo squadre specializzate in logistica che garantiscono un flusso costante di rifornimenti per le nostre operazioni di combattimento. La cooperazione tra squadre logistiche e di combattimento è essenziale per la vittoria.</p>
-                        
-                        <h3>Costruzione</h3>
-                        
-                        <p>La costruzione di basi e fortificazioni è un altro aspetto cruciale di Foxhole. I giocatori possono erigere trincee, bunker, muri, torrette difensive e intere basi. Queste strutture difensive sono vitali per proteggere territori conquistati e risorse strategiche.</p>
-                        
-                        <p>Le basi più avanzate includono fabbriche di munizioni, garage per veicoli, ospedali da campo e centri di comando, formando vere e proprie cittadelle militari che servono come punti di respawn e hub logistici.</p>
-                        
-                        <h3>Intelligenza e Ricognizione</h3>
-                        
-                        <p>L'informazione è potere in Foxhole. Conoscere i movimenti nemici, le loro fortificazioni e i punti deboli è essenziale per pianificare operazioni efficaci. I giocatori possono utilizzare:</p>
-                        
-                        <ul>
-                            <li><strong>Radio Backpacks</strong>: Per vedere nemici e strutture oltre la normale linea visiva</li>
-                            <li><strong>Binocoli</strong>: Per osservare a distanza senza essere individuati</li>
-                            <li><strong>Mappe di intelligenza</strong>: Condivise tra i membri della fazione per coordinare le operazioni</li>
-                            <li><strong>Infiltrazione</strong>: Piccoli gruppi di ricognizione possono penetrare dietro le linee nemiche per raccogliere informazioni</li>
-                        </ul>
-                        
-                        <h2>Ruoli Specializzati in Foxhole</h2>
-                        
-                        <p>Uno degli aspetti più affascinanti di Foxhole è la specializzazione dei ruoli. All'interno del Reggimento ITAR, incoraggiamo i giocatori a specializzarsi in ruoli specifici che meglio si adattano al loro stile di gioco:</p>
-                        
-                        <h3>Fanteria</h3>
-                        
-                        <p>Il nucleo di ogni operazione militare. I fanti sono versatili e possono adattarsi rapidamente a diverse situazioni di combattimento. Come fanteria, potrai:</p>
-                        
-                        <ul>
-                            <li>Partecipare ad assalti coordinati contro posizioni nemiche</li>
-                            <li>Difendere fortificazioni da attacchi nemici</li>
-                            <li>Supportare operazioni di veicoli con protezione anti-fanteria</li>
-                            <li>Condurre incursioni dietro le linee nemiche</li>
-                        </ul>
-                        
-                        <h3>Logistica</h3>
-                        
-                        <p>I logisti sono i veri eroi silenziosi di Foxhole. Senza un sistema logistico efficiente, anche l'esercito più potente si fermerebbe. Come logista, sarai responsabile di:</p>
-                        
-                        <ul>
-                            <li>Raccogliere e raffinare risorse</li>
-                            <li>Produrre equipaggiamento e veicoli</li>
-                            <li>Trasportare rifornimenti al fronte</li>
-                            <li>Gestire l'inventario delle basi e rispondere alle richieste di rifornimenti</li>
-                        </ul>
-                        
-                        <h3>Equipaggi dei Veicoli</h3>
-                        
-                        <p>I veicoli sono forze moltiplicatrici sul campo di battaglia. Come membro di un equipaggio potrai operare:</p>
-                        
-                        <ul>
-                            <li><strong>Carri armati</strong>: Potenti veicoli da combattimento che richiedono un equipaggio coordinato</li>
-                            <li><strong>Artiglieria mobile</strong>: Per bombardamenti a lunga distanza</li>
-                            <li><strong>Veicoli da trasporto truppe</strong>: Per spostamenti rapidi della fanteria</li>
-                            <li><strong>Navi da guerra</strong>: Per operazioni navali e bombardamenti costieri</li>
-                        </ul>
-                        
-                        <h3>Ingegneri</h3>
-                        
-                        <p>Gli ingegneri pianificano e costruiscono le fortificazioni difensive e le infrastrutture. Come ingegnere, ti occuperai di:</p>
-                        
-                        <ul>
-                            <li>Progettare e costruire complessi difensivi</li>
-                            <li>Gestire i sistemi di difesa come torrette e bunker</li>
-                            <li>Costruire e mantenere infrastrutture come ponti e ferrovie</li>
-                            <li>Creare campi minati e trappole per rallentare l'avanzata nemica</li>
-                        </ul>
-                        
-                        <h3>Medici</h3>
-                        
-                        <p>I medici mantengono le truppe in combattimento. Come medico:</p>
-                        
-                        <ul>
-                            <li>Rianimare i compagni caduti sul campo di battaglia</li>
-                            <li>Curare i feriti per riportarli rapidamente in azione</li>
-                            <li>Gestire ospedali da campo</li>
-                            <li>Supportare operazioni offensive minimizzando le perdite</li>
-                        </ul>
-                        
-                        <h3>Comandanti</h3>
-                        
-                        <p>I comandanti coordinano le operazioni e sviluppano strategie. Nel Reggimento ITAR, i comandanti sono selezionati in base all'esperienza e alla capacità di leadership. Come comandante:</p>
-                        
-                        <ul>
-                            <li>Pianificare operazioni militari</li>
-                            <li>Coordinare i diversi reparti (fanteria, corazzati, artiglieria)</li>
-                            <li>Gestire le risorse e definire le priorità</li>
-                            <li>Mantenere la comunicazione con altri reggimenti alleati</li>
-                        </ul>
-                        
-                        <h2>Perché Unirti ai Colonial e al Reggimento ITAR</h2>
-                        
-                        <p>Il Reggimento ITAR è la più grande community italiana dedicata alla fazione Colonial in Foxhole. Ecco perché dovresti unirti a noi:</p>
-                        
-                        <h3>Comunità Attiva e Accogliente</h3>
-                        
-                        <p>Con oltre 100 membri attivi, ITAR offre un ambiente amichevole dove puoi connetterti con altri giocatori italiani appassionati di Foxhole. La nostra comunità è inclusiva e accoglie giocatori di tutti i livelli di esperienza, dai veterani ai nuovi arrivati.</p>
-                        
-                        <h3>Organizzazione e Struttura</h3>
-                        
-                        <p>ITAR è organizzato in squadre specializzate, ognuna con i propri leader e obiettivi. Questa struttura permette operazioni coordinate ed efficienti, massimizzando l'impatto della nostra presenza sul campo di battaglia.</p>
-                        
-                        <h3>Formazione e Supporto</h3>
-                        
-                        <p>Offriamo sessioni di addestramento per i nuovi membri, dove imparerai le meccaniche di base del gioco e le tattiche avanzate. I nostri veterani sono sempre disponibili per rispondere a domande e fornire supporto.</p>
-                        
-                        <h3>Operazioni Regolari</h3>
-                        
-                        <p>Organizziamo operazioni militari regolari, dalle piccole incursioni dietro le linee nemiche alle grandi offensive coordinate con altri reggimenti Colonial. Partecipando a queste operazioni, vivrai l'esperienza Foxhole al suo massimo potenziale.</p>
-                        
-                        <h3>Prestigio e Riconoscimento</h3>
-                        
-                        <p>ITAR è riconosciuto come uno dei reggimenti più efficaci della fazione Colonial. Le nostre operazioni hanno spesso cambiato le sorti di intere guerre, e il nostro nome è rispettato sia dagli alleati che dai nemici.</p>
-                        
-                        <h2>Come Iniziare a Giocare a Foxhole</h2>
-                        
-                        <p>Se sei pronto a unirti al campo di battaglia, ecco i passi da seguire:</p>
-                        
-                        <h3>1. Acquistare il Gioco</h3>
-                        
-                        <p>Foxhole è disponibile su Steam al prezzo di 29,99€. Il gioco riceve aggiornamenti regolari che aggiungono nuovi contenuti e migliorano l'esperienza complessiva.</p>
-                        
-                        <h3>2. Configurazione Iniziale</h3>
-                        
-                        <p>Dopo l'installazione, ti consigliamo di:</p>
-                        
-                        <ul>
-                            <li>Completare il tutorial incluso nel gioco per familiarizzare con i controlli di base</li>
-                            <li>Regolare le impostazioni grafiche e i keybindings secondo le tue preferenze</li>
-                            <li>Verificare che il tuo microfono funzioni correttamente per la comunicazione vocale in-game</li>
-                        </ul>
-                        
-                        <h3>3. Unirti al Reggimento ITAR</h3>
-                        
-                        <p>Il modo migliore per unirti a noi è attraverso il nostro server Discord. Una volta nel server:</p>
-                        
-                        <ul>
-                            <li>Presentati nel canale dedicato ai nuovi membri</li>
-                            <li>Un ufficiale ti contatterà per guidarti nel processo di reclutamento</li>
-                            <li>Riceverai i ruoli appropriati e l'accesso ai canali del reggimento</li>
-                            <li>Potrai partecipare alla prossima sessione di orientamento per nuovi membri</li>
-                        </ul>
-                        
-                        <h3>4. Scegliere un Ruolo</h3>
-                        
-                        <p>Come nuovo membro, ti incoraggiamo a provare diversi ruoli per trovare quello che meglio si adatta al tuo stile di gioco. I nostri ufficiali possono consigliarti in base alle tue preferenze e alle esigenze attuali del reggimento.</p>
-                        
-                        <h3>5. Partecipare alle Operazioni</h3>
-                        
-                        <p>Una volta completato l'orientamento, potrai partecipare alle operazioni regolari del reggimento. Queste operazioni sono annunciate nel nostro Discord e offrono un'ottima opportunità per mettere in pratica ciò che hai imparato.</p>
-                        
-                        <h2>Terminologia Essenziale di Foxhole</h2>
-                        
-                        <p>Per concludere questa guida, ecco alcuni termini comuni che sentirai frequentemente durante le operazioni:</p>
-                        
-                        <ul>
-                            <li><strong>Logi</strong>: Abbreviazione di "logistica", si riferisce a tutte le attività di supporto come raccolta risorse, produzione e trasporto.</li>
-                            <li><strong>FOB</strong> (Forward Operating Base): Una base avanzata vicino alla linea del fronte.</li>
-                            <li><strong>BB</strong> (Border Base): Base temporanea che può essere costruita ai confini tra regioni contestate.</li>
-                            <li><strong>PvE</strong> (Player vs Environment): Attività di combattimento contro strutture nemiche invece che contro giocatori.</li>
-                            <li><strong>QRF</strong> (Quick Reaction Force): Una squadra pronta a rispondere rapidamente a emergenze o incursioni nemiche.</li>
-                            <li><strong>OP</strong> (Observation Post): Postazione avanzata utilizzata principalmente per la ricognizione.</li>
-                            <li><strong>Partisan</strong>: Operazioni di guerriglia dietro le linee nemiche, spesso mirate a interrompere le linee di rifornimento.</li>
-                            <li><strong>Garrison</strong>: Strutture difensive automatizzate che proteggono un'area quando non ci sono giocatori presenti.</li>
-                        </ul>
-                        
-                        <h2>Conclusione: L'Inizio della Tua Avventura Colonial</h2>
-                        
-                        <p>Foxhole offre un'esperienza di guerra unica che va ben oltre il semplice combattimento. È un gioco di cooperazione, strategia e persistenza, dove ogni giocatore può fare la differenza indipendentemente dal ruolo scelto.</p>
-                        
-                        <p>Unendoti al Reggimento ITAR, non solo entrerai a far parte della più grande community italiana di Foxhole, ma avrai anche l'opportunità di contribuire a un conflitto in continua evoluzione, creare legami duraturi con altri giocatori e vivere momenti epici che ricorderai a lungo.</p>
-                        
-                        <p>Ti aspettiamo sul campo di battaglia, soldato. Per la gloria Colonial! 🟢</p>
-                        
-                        <div class="article-tags">
-                            <a href="#" class="article-tag">foxhole</a>
-                            <a href="#" class="article-tag">guida</a>
-                            <a href="#" class="article-tag">colonial</a>
-                            <a href="#" class="article-tag">mmo</a>
-                            <a href="#" class="article-tag">strategia</a>
-                            <a href="#" class="article-tag">itar</a>
-                        </div>
-                        
-                        <div class="article-author">
-                            <div class="author-avatar">
-                                <img src="icona.ico" alt="Avatar del Comandante ITAR">
-                            </div>
-                            <div class="author-info">
-                                <h3 class="author-name">Comandante ITAR</h3>
-                                <p class="author-bio">Fondatore e leader del Reggimento ITAR, veterano di Foxhole con oltre 3000 ore di gioco. Specializzato in strategie Colonial e operazioni di larga scala.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="related-posts">
-                            <h3 class="related-title">Articoli Correlati</h3>
-                            <div class="related-grid">
-                                <a href="#" class="related-card" onclick="showArticle('strategie-colonial'); return false;">
-                                    <img src="ScreenShot00006.png" alt="Carri armati Colonial in formazione" class="related-image">
-                                    <div class="related-content">
-                                        <h4 class="related-card-title">Le 5 Migliori Strategie Colonial per Vincere in Foxhole</h4>
-                                    </div>
-                                </a>
-                                <a href="#" class="related-card" onclick="showArticle('guida-logistica'); return false;">
-                                    <img src="e4uv57nuxip91.webp" alt="Base logistica Colonial" class="related-image">
-                                    <div class="related-content">
-                                        <h4 class="related-card-title">Guida alla Logistica in Foxhole: Come Rifornire il Fronte</h4>
-                                    </div>
-                                </a>
-                                <a href="#" class="related-card" onclick="showArticle('intervista-comandante'); return false;">
-                                    <img src="sfondo-body.jpg" alt="Soldati che collaborano in Foxhole" class="related-image">
-                                    <div class="related-content">
-                                        <h4 class="related-card-title">Intervista al Comandante ITAR: La Storia e il Futuro del Reggimento Italiano</h4>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                `;
-            } else if (articleId === 'strategie-colonial') {
-                // Contenuto per l'articolo sulle strategie Colonial
-                articleContainer.innerHTML = `
-                    <article class="article-header">
-                        <div class="article-meta">
-                            <span class="article-category">Strategie</span>
-                            <span class="article-date"><span aria-hidden="true">📅</span> 15 Maggio 2025</span>
-                        </div>
-                        <h1 class="article-title">Le 5 Migliori Strategie Colonial per Vincere in Foxhole</h1>
-                    </article>
-                    
-                    <div class="article-body">
-                        <p>Le strategie avanzate per la fazione Colonial in Foxhole che ogni membro del Reggimento ITAR dovrebbe conoscere. Contenuto completo in arrivo presto!</p>
-                    </div>
-                `;
-            } else if (articleId === 'guida-logistica') {
-                // Contenuto per l'articolo sulla logistica
-                articleContainer.innerHTML = `
-                    <article class="article-header">
-                        <div class="article-meta">
-                            <span class="article-category">Tutorial</span>
-                            <span class="article-date"><span aria-hidden="true">📅</span> 1 Maggio 2025</span>
-                        </div>
-                        <h1 class="article-title">Guida alla Logistica in Foxhole: Come Rifornire il Fronte</h1>
-                    </article>
-                    
-                    <div class="article-body">
-                        <p>La logistica rappresenta il fondamento di qualsiasi operazione militare in Foxhole. Senza un sistema logistico efficiente, anche il reggimento più numeroso e coordinato sarà destinato alla sconfitta. Questa guida completa ti insegnerà tutto ciò che devi sapere per diventare un logista esperto e contribuire al successo delle operazioni Colonial del Reggimento ITAR.</p>
-                        
-                        <img src="e4uv57nuxip91.webp" alt="Base logistica Colonial ben organizzata in Foxhole con depositi di rifornimenti e veicoli">
-                        
-                        <h2>Cos'è la Logistica in Foxhole</h2>
-                        
-                        <p>In Foxhole, il termine "logistica" (spesso abbreviato come "logi") si riferisce all'intero processo di creazione e distribuzione delle risorse necessarie per sostenere lo sforzo bellico. Questo processo include quattro fasi principali:</p>
-                        
-                        <ul>
-                            <li><strong>Raccolta</strong> - Estrazione di materie prime dal mondo di gioco</li>
-                            <li><strong>Raffinazione</strong> - Conversione delle materie prime in materiali utilizzabili</li>
-                            <li><strong>Produzione</strong> - Creazione di equipaggiamento, munizioni, veicoli e strutture</li>
-                            <li><strong>Distribuzione</strong> - Trasporto delle risorse e degli oggetti prodotti verso le linee del fronte</li>
-                        </ul>
-                        
-                        <p>Ciò che rende unica la logistica in Foxhole è che <strong>ogni singolo proiettile, uniforme, veicolo o struttura</strong> presente nel gioco deve essere creato e trasportato manualmente dai giocatori. Non esiste generazione automatica di risorse o equipaggiamento.</p>
-                        
-                        <blockquote>
-                            "In Foxhole, una buona logistica non è solo importante: è la differenza tra vittoria e sconfitta. Mentre i soldati al fronte ottengono gloria, sono i logisti a rendere possibile quella gloria." - Comandante ITAR
-                        </blockquote>
-                        
-                        <h2>Fase 1: Raccolta delle Risorse</h2>
-                        
-                        <p>Il primo passo nella catena logistica è l'estrazione delle materie prime. In Foxhole esistono diverse risorse fondamentali, ognuna con un proprio utilizzo specifico:</p>
-                        
-                        <h3>Salvage (Rottami)</h3>
-                        
-                        <p>Il Salvage è la risorsa più comune e versatile in Foxhole. Si presenta come mucchi di rottami metallici e può essere trovato in:</p>
-                        
-                        <ul>
-                            <li><strong>Campi di rottami</strong> - Aree con alta concentrazione di salvage</li>
-                            <li><strong>Yard di rottami</strong> - Strutture che forniscono salvage a un ritmo costante</li>
-                            <li><strong>Relitti di veicoli</strong> - Veicoli distrutti che possono essere raccolti per salvage</li>
-                        </ul>
-                        
-                        <p>Per raccogliere il salvage, equipaggia un martello da costruzione e colpisci ripetutamente il mucchio di rottami fino a quando non scompare. Il salvage raccolto verrà aggiunto al tuo inventario.</p>
-                        
-                        <h3>Components (Componenti)</h3>
-                        
-                        <p>I Components sono materiali più rari e preziosi, utilizzati principalmente per la produzione di veicoli e strutture avanzate. Si trovano in:</p>
-                        
-                        <ul>
-                            <li><strong>Giacimenti di componenti</strong> - Grandi depositi naturali identificabili da rocce bluastre</li>
-                            <li><strong>Mine di componenti</strong> - Strutture costruite su giacimenti che consentono un'estrazione più efficiente</li>
-                        </ul>
-                        
-                        <p>I Components richiedono un martello da costruzione per essere raccolti, ma sono disponibili in quantità molto inferiori rispetto al salvage.</p>
-                        
-                        <h3>Sulfur (Zolfo)</h3>
-                        
-                        <p>Il Sulfur è essenziale per la produzione di esplosivi e munizioni ad alto potenziale. Si trova in:</p>
-                        
-                        <ul>
-                            <li><strong>Giacimenti di zolfo</strong> - Riconoscibili dalle rocce di colore giallastro/verdastro</li>
-                            <li><strong>Mine di zolfo</strong> - Strutture costruite sui giacimenti per estrazione continua</li>
-                        </ul>
-                        
-                        <h3>Crude Oil (Petrolio grezzo)</h3>
-                        
-                        <p>Il Crude Oil viene utilizzato per produrre carburante per veicoli e generatori. Si trova in:</p>
-                        
-                        <ul>
-                            <li><strong>Pozzi petroliferi</strong> - Strutture costruite su giacimenti di petrolio</li>
-                        </ul>
-                        
-                        <h3>Coal (Carbone)</h3>
-                        
-                        <p>Il Coal viene utilizzato principalmente come combustibile per i treni e per alcune strutture industriali. Si trova in:</p>
-                        
-                        <ul>
-                            <li><strong>Giacimenti di carbone</strong> - Riconoscibili dalle rocce nere</li>
-                            <li><strong>Mine di carbone</strong> - Strutture costruite sui giacimenti</li>
-                        </ul>
-                        
-                        <h3>Consigli per una Raccolta Efficiente</h3>
-                        
-                        <ul>
-                            <li><strong>Utilizza veicoli</strong> - Un camion (Flatbed) può trasportare molte più risorse di un singolo giocatore</li>
-                            <li><strong>Organizza gruppi di raccolta</strong> - Più giocatori possono raccogliere risorse più rapidamente</li>
-                            <li><strong>Comunica con il reggimento</strong> - Assicurati di sapere quali risorse sono più necessarie in un dato momento</li>
-                            <li><strong>Conosci la mappa</strong> - Familiarizza con le posizioni dei giacimenti principali nelle regioni controllate dai Colonial</li>
-                        </ul>
-                        
-                        <h2>Fase 2: Raffinazione delle Risorse</h2>
-                        
-                        <p>Una volta raccolte, le materie prime devono essere raffinate in materiali utilizzabili prima di poter essere trasformate in oggetti. La raffinazione avviene nelle Refineries (Raffinerie), che si trovano in diverse città e avamposti.</p>
-                        
-                        <h3>Processi di Raffinazione Principali</h3>
-                        
-                        <ul>
-                            <li><strong>Salvage → Basic Materials (BMats)</strong> - Ratio 1:1, tempo di raffinazione rapido
-                                <ul>
-                                    <li>I BMats sono il materiale base per la maggior parte delle costruzioni e degli equipaggiamenti</li>
-                                </ul>
-                            </li>
-                            <li><strong>Components → Refined Materials (RMats)</strong> - Ratio 3:1, tempo di raffinazione medio
-                                <ul>
-                                    <li>Gli RMats sono necessari per veicoli avanzati e strutture complesse</li>
-                                </ul>
-                            </li>
-                            <li><strong>Sulfur → Explosive Materials (EMats)</strong> - Ratio 3:1, tempo di raffinazione medio
-                                <ul>
-                                    <li>Gli EMats sono usati per esplosivi, artiglieria e munizioni anticarro</li>
-                                </ul>
-                            </li>
-                            <li><strong>Crude Oil → Diesel/Petrol</strong> - Ratio variabile, tempo di raffinazione lento
-                                <ul>
-                                    <li>Il Diesel è il carburante standard per i veicoli</li>
-                                    <li>Il Petrol è un carburante avanzato che aumenta le prestazioni di alcuni veicoli</li>
-                                </ul>
-                            </li>
-                            <li><strong>Coal → Coke</strong> - Ratio 2:1, tempo di raffinazione medio
-                                <ul>
-                                    <li>Il Coke è un combustibile più efficiente per treni e alcune strutture</li>
-                                </ul>
-                            </li>
-                        </ul>
-                        
-                        <h3>Ottimizzare il Processo di Raffinazione</h3>
-                        
-                        <p>La raffinazione richiede tempo, quindi è importante ottimizzare questo processo:</p>
-                        
-                        <ul>
-                            <li><strong>Avvia raffinazioni in lotti grandi</strong> - Metti in coda grandi quantità di risorse per minimizzare i viaggi</li>
-                            <li><strong>Utilizza più raffinerie</strong> - Distribuisci il lavoro tra diverse città per massimizzare l'output</li>
-                            <li><strong>Pianifica in anticipo</strong> - La raffinazione può richiedere tempo, quindi inizia il processo molto prima che i materiali siano necessari</li>
-                            <li><strong>Coordina con altri logisti</strong> - Assicurati che qualcuno raccolga i materiali raffinati quando sono pronti</li>
-                        </ul>
-                        
-                        <p>Il Reggimento ITAR consiglia di dedicare alcuni membri esclusivamente alla raffinazione durante le operazioni su larga scala, creando un flusso costante di materiali pronti per la produzione.</p>
-                        
-                        <h2>Fase 3: Produzione di Equipaggiamento</h2>
-                        
-                        <p>Con i materiali raffinati, è possibile produrre tutti gli strumenti necessari per la guerra. La produzione avviene in vari edifici specializzati:</p>
-                        
-                        <h3>Manufacturing Plant (Fabbrica)</h3>
-                        
-                        <p>Le fabbriche producono armi, munizioni, uniformi, strumenti e altri oggetti di base. Ogni oggetto richiede una certa quantità di BMats e, in alcuni casi, EMats.</p>
-                        
-                        <p>Oggetti notevoli producibili nelle fabbriche:</p>
-                        
-                        <ul>
-                            <li><strong>Argenti r.I "Cascadier" (Fucile standard Colonial)</strong> - 120 BMats per cassa da 20</li>
-                            <li><strong>7.92mm (Munizioni standard)</strong> - 80 BMats per cassa da 120</li>
-                            <li><strong>Aalto Storm Rifle 24 (Fucile d'assalto Colonial)</strong> - 165 BMats per cassa da 20</li>
-                            <li><strong>Uniforme Colonial</strong> - 60 BMats per cassa da 10</li>
-                            <li><strong>Catara (Fucile di precisione Colonial)</strong> - 150 BMats per cassa da 20</li>
-                            <li><strong>Ignifist 30 (Lanciarazzi anticarro usa e getta)</strong> - 125 BMats e 75 EMats per cassa da 10</li>
-                        </ul>
-                        
-                        <h3>Vehicle Factory (Fabbrica di Veicoli)</h3>
-                        
-                        <p>Queste strutture sono dedicate alla produzione di veicoli, dalle motociclette ai carri armati. La maggior parte dei veicoli richiede RMats oltre ai BMats di base.</p>
-                        
-                        <p>Veicoli Colonial comuni:</p>
-                        
-                        <ul>
-                            <li><strong>Dunne Transport (Camion standard)</strong> - 100 BMats</li>
-                            <li><strong>Mulloy LPC (APC Colonial)</strong> - 125 BMats e 35 RMats</li>
-                            <li><strong>T8 "Gemini" (Autocannone Colonial)</strong> - 145 BMats e 30 RMats</li>
-                            <li><strong>T20 "Ixion" Tankette</strong> - 95 BMats e 35 RMats</li>
-                            <li><strong>T12 "Actaeon" (Carro trasporto risorse)</strong> - 150 BMats e 5 RMats</li>
-                            <li><strong>85K-a "Falchion" (Carro armato medio Colonial)</strong> - 165 BMats e 140 RMats</li>
-                            <li><strong>H-5 "Hatchet" (Carro armato leggero Colonial)</strong> - 155 BMats e 120 RMats</li>
-                            <li><strong>H-10 "Spatha" (Carro armato medio avanzato Colonial)</strong> - 175 BMats e 175 RMats</li>
-                        </ul>
-                        
-                        <h3>Construction Yard (Cantiere Edile)</h3>
-                        
-                        <p>I cantieri edili producono elementi strutturali per fortificazioni e basi. Qui si possono creare:</p>
-                        
-                        <ul>
-                            <li><strong>Materiali per bunker</strong> - Bunker Supplies, Bunker Base, trincee avanzate</li>
-                            <li><strong>Casematte</strong> - Strutture difensive fortificate con armi montate</li>
-                            <li><strong>Garrison Supplies</strong> - Necessari per mantenere attive le strutture difensive</li>
-                        </ul>
-                        
-                        <h3>Seaport (Porto) e Shipyard (Cantiere Navale)</h3>
-                        
-                        <p>Queste strutture sono dedicate alla produzione e alla gestione di navi da guerra e trasporto. Le navi richiedono grandi quantità di RMats e sono essenziali per operazioni costiere e anfibie.</p>
-                        
-                        <h3>Mass Production Factory (MPF)</h3>
-                        
-                        <p>Le MPF sono fabbriche specializzate che consentono la produzione in serie di veicoli a un costo ridotto. Pianificare produzioni MPF è una strategia chiave per il Reggimento ITAR, in quanto permette di equipaggiare rapidamente più squadre con veicoli identici.</p>
-                        
-                        <h3>Strategie di Produzione per il Reggimento ITAR</h3>
-                        
-                        <p>Come Colonial, la nostra filosofia di produzione si basa su questi principi:</p>
-                        
-                        <ul>
-                            <li><strong>Quantità su qualità</strong> - Produrre in massa veicoli ed equipaggiamento più economici che possono essere facilmente sostituiti</li>
-                            <li><strong>Standardizzazione</strong> - Concentrarsi su pochi modelli di veicoli e armi per semplificare la logistica e le riparazioni</li>
-                            <li><strong>Pianificazione centralizzata</strong> - Coordinare la produzione tra tutti i logisti del reggimento per evitare duplicazioni e carenze</li>
-                            <li><strong>Priorità ai veicoli a medio costo</strong> - Veicoli come il Falchion offrono il miglior rapporto costo/efficacia in battaglia</li>
-                        </ul>
-                        
-                        <h2>Fase 4: Distribuzione e Trasporto</h2>
-                        
-                        <p>La fase finale e spesso più pericolosa della logistica è la distribuzione: portare le forniture prodotte dove sono necessarie, spesso in prima linea o in basi avanzate.</p>
-                        
-                        <h3>Veicoli da Trasporto</h3>
-                        
-                        <p>Per un trasporto efficiente, è fondamentale scegliere il veicolo giusto:</p>
-                        
-                        <ul>
-                            <li><strong>Dunne Transport</strong> - Veicolo standard per consegne rapide, capacità limitata</li>
-                            <li><strong>T12 "Actaeon" Flatbed</strong> - Ideale per trasportare grandi quantità di risorse o containers</li>
-                            <li><strong>R-1 Hauler</strong> - Camion pesante con grande capacità di carico</li>
-                            <li><strong>Charon Freighter</strong> - Nave da trasporto per operazioni logistiche marittime</li>
-                            <li><strong>Treni di rifornimento</strong> - Il metodo più efficiente per grandi volumi su lunghe distanze, ma richiede infrastrutture</li>
-                        </ul>
-                        
-                        <h3>Forward Operating Bases (FOB)</h3>
-                        
-                        <p>Le FOB sono basi avanzate vicino alla linea del fronte che fungono da hub logistici e punti di spawn. Una FOB ben rifornita dovrebbe includere:</p>
-                        
-                        <ul>
-                            <li><strong>Spawn Point</strong> - Di solito un Base Garrison o un Forward Base</li>
-                            <li><strong>Stockpile</strong> - Deposito per armi, munizioni e forniture</li>
-                            <li><strong>Medical Supplies</strong> - Plasma, First Aid Kits e Bandages</li>
-                            <li><strong>Garage</strong> - Per riparare e immagazzinare veicoli</li>
-                            <li><strong>Difese perimetrali</strong> - Bunker, trincee e filo spinato</li>
-                        </ul>
-                        
-                        <h3>Sistemi di Stoccaggio</h3>
-                        
-                        <p>In Foxhole esistono diversi tipi di depositi per conservare le risorse:</p>
-                        
-                        <ul>
-                            <li><strong>Public Stockpile</strong> - Accessibile a tutti i giocatori della fazione</li>
-                            <li><strong>Squad/Regiment Reserved Storage</strong> - Accessibile solo ai membri del reggimento</li>
-                            <li><strong>Seaport Storage</strong> - Grande capacità, ideale per risorse che non servono immediatamente</li>
-                            <li><strong>Container</strong> - Unità di stoccaggio mobile che può essere caricata su Flatbed</li>
-                        </ul>
-                        
-                        <p>Come reggimento, ITAR utilizza un sistema misto: teniamo alcune risorse critiche in depositi riservati per operazioni pianificate, mentre contribuiamo regolarmente ai depositi pubblici per sostenere lo sforzo bellico generale.</p>
-                        
-                        <h3>Sicurezza durante il Trasporto</h3>
-                        
-                        <p>Il trasporto è vulnerabile ad attacchi nemici, specialmente dai "partisan" - piccoli gruppi di nemici che operano dietro le linee per interrompere le catene di rifornimento.</p>
-                        
-                        <p>Misure di sicurezza raccomandate:</p>
-                        
-                        <ul>
-                            <li><strong>Mai viaggiare soli</strong> - Organizzare convogli con veicoli armati di scorta</li>
-                            <li><strong>Utilizzare strade secondarie</strong> - Variare i percorsi per evitare imboscate</li>
-                            <li><strong>Ricognizione preventiva</strong> - Controllare il percorso prima di trasportare carichi preziosi</li>
-                            <li><strong>Postazioni QRF</strong> - Avere squadre di Quick Reaction Force pronte a rispondere agli attacchi contro i convogli logistici</li>
-                            <li><strong>Watchtowers</strong> - Costruire torri di osservazione lungo le rotte logistiche principali</li>
-                        </ul>
-                        
-                        <h2>Organizzazione Logistica nel Reggimento ITAR</h2>
-                        
-                        <p>Come Colonial, il nostro vantaggio competitivo risiede nell'efficienza logistica. Il Reggimento ITAR utilizza un sistema di organizzazione logistica a tre livelli:</p>
-                        
-                        <h3>Livello 1: Logistica di Base</h3>
-                        
-                        <p>Responsabile dell'estrazione e raffinazione di risorse, garantendo un flusso costante di materiali base. Compiti:</p>
-                        
-                        <ul>
-                            <li>Gestione delle miniere e dei giacimenti nelle regioni sicure</li>
-                            <li>Manutenzione delle raffinerie e pianificazione delle code di raffinazione</li>
-                            <li>Creazione e gestione dei depositi centrali di materiali</li>
-                        </ul>
-                        
-                        <h3>Livello 2: Produzione e Coordinamento</h3>
-                        
-                        <p>Si occupa della trasformazione dei materiali in equipaggiamento e della pianificazione logistica. Compiti:</p>
-                        
-                        <ul>
-                            <li>Gestione delle fabbriche e coordinamento della produzione</li>
-                            <li>Mantenimento degli inventari e monitoraggio delle scorte</li>
-                            <li>Pianificazione delle produzioni MPF a lungo termine</li>
-                            <li>Coordinamento con i comandanti per determinare le priorità</li>
-                        </ul>
-                        
-                        <h3>Livello 3: Distribuzione Front-line</h3>
-                        
-                        <p>Responsabile della consegna delle forniture alle truppe al fronte. Compiti:</p>
-                        
-                        <ul>
-                            <li>Trasporto di rifornimenti alle FOB e ai punti di battaglia</li>
-                            <li>Gestione delle richieste urgenti dal fronte</li>
-                            <li>Evacuazione di feriti e recupero di veicoli danneggiati</li>
-                            <li>Costruzione e mantenimento di FOB avanzate</li>
-                        </ul>
-                        
-                        <h3>Sistema di Comunicazione Logistica</h3>
-                        
-                        <p>La comunicazione è fondamentale per una logistica efficace. Il Reggimento ITAR utilizza:</p>
-                        
-                        <ul>
-                            <li><strong>Canale Discord "Richieste Logistiche"</strong> - Dove le unità in prima linea possono richiedere specifici rifornimenti</li>
-                            <li><strong>Modulo standardizzato di richiesta</strong> - Che include tipo di materiale, quantità, priorità e posizione</li>
-                            <li><strong>Mappa logistica condivisa</strong> - Con tutte le rotte, miniere, fabbriche e depositi marcati</li>
-                            <li><strong>Briefing logistico giornaliero</strong> - Per coordinare le operazioni e stabilire le priorità</li>
-                        </ul>
-                        
-                        <h2>Tecniche Avanzate di Logistica</h2>
-                        
-                        <h3>Sistema "Pull"</h3>
-                        
-                        <p>Invece di portare rifornimenti basati su supposizioni, il sistema "pull" risponde alle richieste specifiche dal fronte. Questo riduce gli sprechi e garantisce che le truppe ricevano esattamente ciò di cui hanno bisogno.</p>
-                        
-                        <h3>Depositi Satellite</h3>
-                        
-                        <p>Creare piccoli depositi di rifornimenti in posizioni strategiche vicino a potenziali fronti futuri. Questi depositi consentono una risposta rapida quando si apre un nuovo fronte.</p>
-                        
-                        <h3>Rotazione dei Logisti</h3>
-                        
-                        <p>Per prevenire il burnout (un problema reale nella logistica di Foxhole), implementiamo un sistema di rotazione dove i membri alternano ruoli di combattimento e logistica.</p>
-                        
-                        <h3>Pianificazione Just-in-Time</h3>
-                        
-                        <p>Sincronizzare la produzione e la distribuzione in modo che i rifornimenti arrivino poco prima di essere necessari, riducendo la vulnerabilità e migliorando l'efficienza dello stoccaggio.</p>
-                        
-                        <h2>Problemi Comuni e Soluzioni</h2>
-                        
-                        <h3>Backlogging (Congestione)</h3>
-                        
-                        <p><strong>Problema:</strong> Le raffinerie si intasano perché nessuno ritira i materiali raffinati.</p>
-                        
-                        <p><strong>Soluzione:</strong> Sistema di rotazione dedicato dove squadre specifiche sono responsabili del ritiro dei materiali da determinate raffinerie.</p>
-                        
-                        <h3>Partisan (Incursori nemici)</h3>
-                        
-                        <p><strong>Problema:</strong> I rifornimenti vengono intercettati da gruppi nemici dietro le linee.</p>
-                        
-                        <p><strong>Soluzione:</strong> Pattuglie regolari, watchtowers, convogli protetti e squadre QRF dedicate alla protezione delle rotte logistiche.</p>
-                        
-                        <h3>Bottlenecking (Colli di bottiglia)</h3>
-                        
-                        <p><strong>Problema:</strong> Le risorse si accumulano in un punto della catena logistica mentre scarseggiano in altri.</p>
-                        
-                        <p><strong>Soluzione:</strong> Dashboard logistica che monitora i livelli di risorse in tempo reale e permette di identificare rapidamente i colli di bottiglia.</p>
-                        
-                        <h3>Overproduction (Sovrapproduzione)</h3>
-                        
-                        <p><strong>Problema:</strong> Risorse sprecate nella produzione di oggetti già abbondanti o non necessari.</p>
-                        
-                        <p><strong>Soluzione:</strong> Controllo centralizzato degli inventari e sistema di richieste verificate prima della produzione.</p>
-                        
-                        <h2>Il Futuro della Logistica Colonial</h2>
-                        
-                        <p>Come Colonial, la nostra filosofia logistica si basa sulla flessibilità e l'adattabilità. I Warden tendono a costruire sistemi logistici più rigidi ma potenti, mentre noi eccelliamo nell'improvvisazione e nella risposta rapida alle esigenze mutevoli del campo di battaglia.</p>
-                        
-                        <p>Il Reggimento ITAR sta sviluppando questi approcci innovativi:</p>
-                        
-                        <ul>
-                            <li><strong>Logistica mobile</strong> - Unità logistiche altamente mobili che possono ridistribuirsi rapidamente dove necessario</li>
-                            <li><strong>Operazioni anfibie logistiche</strong> - Utilizzare le vie d'acqua per aggirare le linee nemiche e rifornire fronti isolati</li>
-                            <li><strong>Sistemi modulari</strong> - Basi logistiche prefabbricate che possono essere rapidamente assemblate vicino a nuovi fronti</li>
-                        </ul>
-                        
-                        <h2>Conclusione: L'Importanza della Logistica</h2>
-                        
-                        <p>La logistica è spesso descritta come "la parte non sexy" di Foxhole. Non offre l'adrenalina diretta del combattimento o la gloria immediata delle conquiste territoriali. Tuttavia, è il fondamento di tutto ciò che accade sul campo di battaglia.</p>
-                        
-                        <p>Nel Reggimento ITAR, riconosciamo e celebriamo il contributo vitale dei nostri logisti. Senza di loro, non ci sarebbero vittorie da raccontare o territori da rivendicare. Come diceva un famoso generale: "Gli amatori studiano la tattica, i professionisti studiano la logistica."</p>
-                        
-                        <p>Se vuoi contribuire allo sforzo bellico Colonial in modo significativo, considera di unirti alle nostre operazioni logistiche. Un buon logista vale quanto dieci soldati sul campo.</p>
-                        
-                        <p>Per la gloria Colonial! 🟢</p>
-                        
-                        <div class="article-tags">
-                            <a href="#" class="article-tag">foxhole</a>
-                            <a href="#" class="article-tag">logistica</a>
-                            <a href="#" class="article-tag">colonial</a>
-                            <a href="#" class="article-tag">tutorial</a>
-                            <a href="#" class="article-tag">guida</a>
-                            <a href="#" class="article-tag">itar</a>
-                        </div>
-                        
-                        <div class="article-author">
-                            <div class="author-avatar">
-                                <img src="icona.ico" alt="Avatar del Quartiermaster ITAR">
-                            </div>
-                            <div class="author-info">
-                                <h3 class="author-name">Quartiermaster ITAR</h3>
-                                <p class="author-bio">Responsabile delle operazioni logistiche del Reggimento ITAR. Veterano con oltre 2000 ore di gioco, specializzato in sistemi logistici avanzati e coordinamento di produzione su larga scala.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="related-posts">
-                            <h3 class="related-title">Articoli Correlati</h3>
-                            <div class="related-grid">
-                                <a href="#" class="related-card" onclick="showArticle('foxhole-guida-completa'); return false;">
-                                    <img src="ScreenShot00007.png" alt="Soldati Colonial in battaglia" class="related-image">
-                                    <div class="related-content">
-                                        <h4 class="related-card-title">Guida Completa a Foxhole: Tutto Quello che Devi Sapere sul MMO Strategico</h4>
-                                    </div>
-                                </a>
-                                <a href="#" class="related-card" onclick="showArticle('strategie-colonial'); return false;">
-                                    <img src="ScreenShot00006.png" alt="Carri armati Colonial in formazione" class="related-image">
-                                    <div class="related-content">
-                                        <h4 class="related-card-title">Le 5 Migliori Strategie Colonial per Vincere in Foxhole</h4>
-                                    </div>
-                                </a>
-                                <a href="#" class="related-card" onclick="showArticle('battaglia-endless-shore'); return false;">
-                                    <img src="ScreenShot00007.png" alt="Battaglia a Endless Shore" class="related-image">
-                                    <div class="related-content">
-                                        <h4 class="related-card-title">La Grande Battaglia di Endless Shore: Come ITAR ha Cambiato le Sorti della Guerra</h4>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                            } else if (articleId === 'battaglia-endless-shore') {
-                                // Contenuto per l'articolo sulla battaglia
-                                articleContainer.innerHTML = `
-                                    <article class="article-header">
-                                        <div class="article-meta">
-                                            <span class="article-category">Reportage</span>
-                                            <span class="article-date"><span aria-hidden="true">📅</span> 25 Aprile 2025</span>
-                                        </div>
-                                        <h1 class="article-title">La Grande Battaglia di Endless Shore: Come ITAR ha Cambiato le Sorti della Guerra</h1>
-                                    </article>
-                                    
-                                    <div class="article-body">
-                                        <p>Il racconto dettagliato della storica battaglia di Endless Shore e del ruolo cruciale del Reggimento ITAR. Contenuto completo in arrivo presto!</p>
-                                    </div>
-                                `;
-                            } else if (articleId === 'intervista-comandante') {
-                                // Contenuto per l'intervista
-                                articleContainer.innerHTML = `
-                                    <article class="article-header">
-                                        <div class="article-meta">
-                                            <span class="article-category">Community</span>
-                                            <span class="article-date"><span aria-hidden="true">📅</span> 18 Aprile 2025</span>
-                                        </div>
-                                        <h1 class="article-title">Intervista al Comandante ITAR: La Storia e il Futuro del Reggimento Italiano</h1>
-                                    </article>
-                                    
-                                    <div class="article-body">
-                                        <p>Un'intervista esclusiva con il fondatore e comandante del Reggimento ITAR. Contenuto completo in arrivo presto!</p>
-                                    </div>
-                                `;
-            }
-            
-            // Scorri fino all'inizio dell'articolo
-            window.scrollTo({
-                top: fullArticle.offsetTop - 100,
-                behavior: 'smooth'
-            });
-        }
-        
-        // Funzione per nascondere l'articolo e mostrare la lista
-        function hideArticle() {
-            document.getElementById('full-article').classList.remove('active');
-            document.getElementById('articles-list').classList.remove('hidden');
-            
-            // Scorri fino all'inizio della pagina
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-    </script>
 </body>
 </html>
