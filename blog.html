@@ -1551,39 +1551,444 @@
                     </article>
                     
                     <div class="article-body">
-                        <p>La guida definitiva alla logistica in Foxhole: come estrarre risorse, produrre equipaggiamento e mantenere le linee di rifornimento. Contenuto completo in arrivo presto!</p>
-                    </div>
-                `;
-            } else if (articleId === 'battaglia-endless-shore') {
-                // Contenuto per l'articolo sulla battaglia
-                articleContainer.innerHTML = `
-                    <article class="article-header">
-                        <div class="article-meta">
-                            <span class="article-category">Reportage</span>
-                            <span class="article-date"><span aria-hidden="true">📅</span> 25 Aprile 2025</span>
+                        <p>La logistica rappresenta il fondamento di qualsiasi operazione militare in Foxhole. Senza un sistema logistico efficiente, anche il reggimento più numeroso e coordinato sarà destinato alla sconfitta. Questa guida completa ti insegnerà tutto ciò che devi sapere per diventare un logista esperto e contribuire al successo delle operazioni Colonial del Reggimento ITAR.</p>
+                        
+                        <img src="e4uv57nuxip91.webp" alt="Base logistica Colonial ben organizzata in Foxhole con depositi di rifornimenti e veicoli">
+                        
+                        <h2>Cos'è la Logistica in Foxhole</h2>
+                        
+                        <p>In Foxhole, il termine "logistica" (spesso abbreviato come "logi") si riferisce all'intero processo di creazione e distribuzione delle risorse necessarie per sostenere lo sforzo bellico. Questo processo include quattro fasi principali:</p>
+                        
+                        <ul>
+                            <li><strong>Raccolta</strong> - Estrazione di materie prime dal mondo di gioco</li>
+                            <li><strong>Raffinazione</strong> - Conversione delle materie prime in materiali utilizzabili</li>
+                            <li><strong>Produzione</strong> - Creazione di equipaggiamento, munizioni, veicoli e strutture</li>
+                            <li><strong>Distribuzione</strong> - Trasporto delle risorse e degli oggetti prodotti verso le linee del fronte</li>
+                        </ul>
+                        
+                        <p>Ciò che rende unica la logistica in Foxhole è che <strong>ogni singolo proiettile, uniforme, veicolo o struttura</strong> presente nel gioco deve essere creato e trasportato manualmente dai giocatori. Non esiste generazione automatica di risorse o equipaggiamento.</p>
+                        
+                        <blockquote>
+                            "In Foxhole, una buona logistica non è solo importante: è la differenza tra vittoria e sconfitta. Mentre i soldati al fronte ottengono gloria, sono i logisti a rendere possibile quella gloria." - Comandante ITAR
+                        </blockquote>
+                        
+                        <h2>Fase 1: Raccolta delle Risorse</h2>
+                        
+                        <p>Il primo passo nella catena logistica è l'estrazione delle materie prime. In Foxhole esistono diverse risorse fondamentali, ognuna con un proprio utilizzo specifico:</p>
+                        
+                        <h3>Salvage (Rottami)</h3>
+                        
+                        <p>Il Salvage è la risorsa più comune e versatile in Foxhole. Si presenta come mucchi di rottami metallici e può essere trovato in:</p>
+                        
+                        <ul>
+                            <li><strong>Campi di rottami</strong> - Aree con alta concentrazione di salvage</li>
+                            <li><strong>Yard di rottami</strong> - Strutture che forniscono salvage a un ritmo costante</li>
+                            <li><strong>Relitti di veicoli</strong> - Veicoli distrutti che possono essere raccolti per salvage</li>
+                        </ul>
+                        
+                        <p>Per raccogliere il salvage, equipaggia un martello da costruzione e colpisci ripetutamente il mucchio di rottami fino a quando non scompare. Il salvage raccolto verrà aggiunto al tuo inventario.</p>
+                        
+                        <h3>Components (Componenti)</h3>
+                        
+                        <p>I Components sono materiali più rari e preziosi, utilizzati principalmente per la produzione di veicoli e strutture avanzate. Si trovano in:</p>
+                        
+                        <ul>
+                            <li><strong>Giacimenti di componenti</strong> - Grandi depositi naturali identificabili da rocce bluastre</li>
+                            <li><strong>Mine di componenti</strong> - Strutture costruite su giacimenti che consentono un'estrazione più efficiente</li>
+                        </ul>
+                        
+                        <p>I Components richiedono un martello da costruzione per essere raccolti, ma sono disponibili in quantità molto inferiori rispetto al salvage.</p>
+                        
+                        <h3>Sulfur (Zolfo)</h3>
+                        
+                        <p>Il Sulfur è essenziale per la produzione di esplosivi e munizioni ad alto potenziale. Si trova in:</p>
+                        
+                        <ul>
+                            <li><strong>Giacimenti di zolfo</strong> - Riconoscibili dalle rocce di colore giallastro/verdastro</li>
+                            <li><strong>Mine di zolfo</strong> - Strutture costruite sui giacimenti per estrazione continua</li>
+                        </ul>
+                        
+                        <h3>Crude Oil (Petrolio grezzo)</h3>
+                        
+                        <p>Il Crude Oil viene utilizzato per produrre carburante per veicoli e generatori. Si trova in:</p>
+                        
+                        <ul>
+                            <li><strong>Pozzi petroliferi</strong> - Strutture costruite su giacimenti di petrolio</li>
+                        </ul>
+                        
+                        <h3>Coal (Carbone)</h3>
+                        
+                        <p>Il Coal viene utilizzato principalmente come combustibile per i treni e per alcune strutture industriali. Si trova in:</p>
+                        
+                        <ul>
+                            <li><strong>Giacimenti di carbone</strong> - Riconoscibili dalle rocce nere</li>
+                            <li><strong>Mine di carbone</strong> - Strutture costruite sui giacimenti</li>
+                        </ul>
+                        
+                        <h3>Consigli per una Raccolta Efficiente</h3>
+                        
+                        <ul>
+                            <li><strong>Utilizza veicoli</strong> - Un camion (Flatbed) può trasportare molte più risorse di un singolo giocatore</li>
+                            <li><strong>Organizza gruppi di raccolta</strong> - Più giocatori possono raccogliere risorse più rapidamente</li>
+                            <li><strong>Comunica con il reggimento</strong> - Assicurati di sapere quali risorse sono più necessarie in un dato momento</li>
+                            <li><strong>Conosci la mappa</strong> - Familiarizza con le posizioni dei giacimenti principali nelle regioni controllate dai Colonial</li>
+                        </ul>
+                        
+                        <h2>Fase 2: Raffinazione delle Risorse</h2>
+                        
+                        <p>Una volta raccolte, le materie prime devono essere raffinate in materiali utilizzabili prima di poter essere trasformate in oggetti. La raffinazione avviene nelle Refineries (Raffinerie), che si trovano in diverse città e avamposti.</p>
+                        
+                        <h3>Processi di Raffinazione Principali</h3>
+                        
+                        <ul>
+                            <li><strong>Salvage → Basic Materials (BMats)</strong> - Ratio 1:1, tempo di raffinazione rapido
+                                <ul>
+                                    <li>I BMats sono il materiale base per la maggior parte delle costruzioni e degli equipaggiamenti</li>
+                                </ul>
+                            </li>
+                            <li><strong>Components → Refined Materials (RMats)</strong> - Ratio 3:1, tempo di raffinazione medio
+                                <ul>
+                                    <li>Gli RMats sono necessari per veicoli avanzati e strutture complesse</li>
+                                </ul>
+                            </li>
+                            <li><strong>Sulfur → Explosive Materials (EMats)</strong> - Ratio 3:1, tempo di raffinazione medio
+                                <ul>
+                                    <li>Gli EMats sono usati per esplosivi, artiglieria e munizioni anticarro</li>
+                                </ul>
+                            </li>
+                            <li><strong>Crude Oil → Diesel/Petrol</strong> - Ratio variabile, tempo di raffinazione lento
+                                <ul>
+                                    <li>Il Diesel è il carburante standard per i veicoli</li>
+                                    <li>Il Petrol è un carburante avanzato che aumenta le prestazioni di alcuni veicoli</li>
+                                </ul>
+                            </li>
+                            <li><strong>Coal → Coke</strong> - Ratio 2:1, tempo di raffinazione medio
+                                <ul>
+                                    <li>Il Coke è un combustibile più efficiente per treni e alcune strutture</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        
+                        <h3>Ottimizzare il Processo di Raffinazione</h3>
+                        
+                        <p>La raffinazione richiede tempo, quindi è importante ottimizzare questo processo:</p>
+                        
+                        <ul>
+                            <li><strong>Avvia raffinazioni in lotti grandi</strong> - Metti in coda grandi quantità di risorse per minimizzare i viaggi</li>
+                            <li><strong>Utilizza più raffinerie</strong> - Distribuisci il lavoro tra diverse città per massimizzare l'output</li>
+                            <li><strong>Pianifica in anticipo</strong> - La raffinazione può richiedere tempo, quindi inizia il processo molto prima che i materiali siano necessari</li>
+                            <li><strong>Coordina con altri logisti</strong> - Assicurati che qualcuno raccolga i materiali raffinati quando sono pronti</li>
+                        </ul>
+                        
+                        <p>Il Reggimento ITAR consiglia di dedicare alcuni membri esclusivamente alla raffinazione durante le operazioni su larga scala, creando un flusso costante di materiali pronti per la produzione.</p>
+                        
+                        <h2>Fase 3: Produzione di Equipaggiamento</h2>
+                        
+                        <p>Con i materiali raffinati, è possibile produrre tutti gli strumenti necessari per la guerra. La produzione avviene in vari edifici specializzati:</p>
+                        
+                        <h3>Manufacturing Plant (Fabbrica)</h3>
+                        
+                        <p>Le fabbriche producono armi, munizioni, uniformi, strumenti e altri oggetti di base. Ogni oggetto richiede una certa quantità di BMats e, in alcuni casi, EMats.</p>
+                        
+                        <p>Oggetti notevoli producibili nelle fabbriche:</p>
+                        
+                        <ul>
+                            <li><strong>Argenti r.I "Cascadier" (Fucile standard Colonial)</strong> - 120 BMats per cassa da 20</li>
+                            <li><strong>7.92mm (Munizioni standard)</strong> - 80 BMats per cassa da 120</li>
+                            <li><strong>Aalto Storm Rifle 24 (Fucile d'assalto Colonial)</strong> - 165 BMats per cassa da 20</li>
+                            <li><strong>Uniforme Colonial</strong> - 60 BMats per cassa da 10</li>
+                            <li><strong>Catara (Fucile di precisione Colonial)</strong> - 150 BMats per cassa da 20</li>
+                            <li><strong>Ignifist 30 (Lanciarazzi anticarro usa e getta)</strong> - 125 BMats e 75 EMats per cassa da 10</li>
+                        </ul>
+                        
+                        <h3>Vehicle Factory (Fabbrica di Veicoli)</h3>
+                        
+                        <p>Queste strutture sono dedicate alla produzione di veicoli, dalle motociclette ai carri armati. La maggior parte dei veicoli richiede RMats oltre ai BMats di base.</p>
+                        
+                        <p>Veicoli Colonial comuni:</p>
+                        
+                        <ul>
+                            <li><strong>Dunne Transport (Camion standard)</strong> - 100 BMats</li>
+                            <li><strong>Mulloy LPC (APC Colonial)</strong> - 125 BMats e 35 RMats</li>
+                            <li><strong>T8 "Gemini" (Autocannone Colonial)</strong> - 145 BMats e 30 RMats</li>
+                            <li><strong>T20 "Ixion" Tankette</strong> - 95 BMats e 35 RMats</li>
+                            <li><strong>T12 "Actaeon" (Carro trasporto risorse)</strong> - 150 BMats e 5 RMats</li>
+                            <li><strong>85K-a "Falchion" (Carro armato medio Colonial)</strong> - 165 BMats e 140 RMats</li>
+                            <li><strong>H-5 "Hatchet" (Carro armato leggero Colonial)</strong> - 155 BMats e 120 RMats</li>
+                            <li><strong>H-10 "Spatha" (Carro armato medio avanzato Colonial)</strong> - 175 BMats e 175 RMats</li>
+                        </ul>
+                        
+                        <h3>Construction Yard (Cantiere Edile)</h3>
+                        
+                        <p>I cantieri edili producono elementi strutturali per fortificazioni e basi. Qui si possono creare:</p>
+                        
+                        <ul>
+                            <li><strong>Materiali per bunker</strong> - Bunker Supplies, Bunker Base, trincee avanzate</li>
+                            <li><strong>Casematte</strong> - Strutture difensive fortificate con armi montate</li>
+                            <li><strong>Garrison Supplies</strong> - Necessari per mantenere attive le strutture difensive</li>
+                        </ul>
+                        
+                        <h3>Seaport (Porto) e Shipyard (Cantiere Navale)</h3>
+                        
+                        <p>Queste strutture sono dedicate alla produzione e alla gestione di navi da guerra e trasporto. Le navi richiedono grandi quantità di RMats e sono essenziali per operazioni costiere e anfibie.</p>
+                        
+                        <h3>Mass Production Factory (MPF)</h3>
+                        
+                        <p>Le MPF sono fabbriche specializzate che consentono la produzione in serie di veicoli a un costo ridotto. Pianificare produzioni MPF è una strategia chiave per il Reggimento ITAR, in quanto permette di equipaggiare rapidamente più squadre con veicoli identici.</p>
+                        
+                        <h3>Strategie di Produzione per il Reggimento ITAR</h3>
+                        
+                        <p>Come Colonial, la nostra filosofia di produzione si basa su questi principi:</p>
+                        
+                        <ul>
+                            <li><strong>Quantità su qualità</strong> - Produrre in massa veicoli ed equipaggiamento più economici che possono essere facilmente sostituiti</li>
+                            <li><strong>Standardizzazione</strong> - Concentrarsi su pochi modelli di veicoli e armi per semplificare la logistica e le riparazioni</li>
+                            <li><strong>Pianificazione centralizzata</strong> - Coordinare la produzione tra tutti i logisti del reggimento per evitare duplicazioni e carenze</li>
+                            <li><strong>Priorità ai veicoli a medio costo</strong> - Veicoli come il Falchion offrono il miglior rapporto costo/efficacia in battaglia</li>
+                        </ul>
+                        
+                        <h2>Fase 4: Distribuzione e Trasporto</h2>
+                        
+                        <p>La fase finale e spesso più pericolosa della logistica è la distribuzione: portare le forniture prodotte dove sono necessarie, spesso in prima linea o in basi avanzate.</p>
+                        
+                        <h3>Veicoli da Trasporto</h3>
+                        
+                        <p>Per un trasporto efficiente, è fondamentale scegliere il veicolo giusto:</p>
+                        
+                        <ul>
+                            <li><strong>Dunne Transport</strong> - Veicolo standard per consegne rapide, capacità limitata</li>
+                            <li><strong>T12 "Actaeon" Flatbed</strong> - Ideale per trasportare grandi quantità di risorse o containers</li>
+                            <li><strong>R-1 Hauler</strong> - Camion pesante con grande capacità di carico</li>
+                            <li><strong>Charon Freighter</strong> - Nave da trasporto per operazioni logistiche marittime</li>
+                            <li><strong>Treni di rifornimento</strong> - Il metodo più efficiente per grandi volumi su lunghe distanze, ma richiede infrastrutture</li>
+                        </ul>
+                        
+                        <h3>Forward Operating Bases (FOB)</h3>
+                        
+                        <p>Le FOB sono basi avanzate vicino alla linea del fronte che fungono da hub logistici e punti di spawn. Una FOB ben rifornita dovrebbe includere:</p>
+                        
+                        <ul>
+                            <li><strong>Spawn Point</strong> - Di solito un Base Garrison o un Forward Base</li>
+                            <li><strong>Stockpile</strong> - Deposito per armi, munizioni e forniture</li>
+                            <li><strong>Medical Supplies</strong> - Plasma, First Aid Kits e Bandages</li>
+                            <li><strong>Garage</strong> - Per riparare e immagazzinare veicoli</li>
+                            <li><strong>Difese perimetrali</strong> - Bunker, trincee e filo spinato</li>
+                        </ul>
+                        
+                        <h3>Sistemi di Stoccaggio</h3>
+                        
+                        <p>In Foxhole esistono diversi tipi di depositi per conservare le risorse:</p>
+                        
+                        <ul>
+                            <li><strong>Public Stockpile</strong> - Accessibile a tutti i giocatori della fazione</li>
+                            <li><strong>Squad/Regiment Reserved Storage</strong> - Accessibile solo ai membri del reggimento</li>
+                            <li><strong>Seaport Storage</strong> - Grande capacità, ideale per risorse che non servono immediatamente</li>
+                            <li><strong>Container</strong> - Unità di stoccaggio mobile che può essere caricata su Flatbed</li>
+                        </ul>
+                        
+                        <p>Come reggimento, ITAR utilizza un sistema misto: teniamo alcune risorse critiche in depositi riservati per operazioni pianificate, mentre contribuiamo regolarmente ai depositi pubblici per sostenere lo sforzo bellico generale.</p>
+                        
+                        <h3>Sicurezza durante il Trasporto</h3>
+                        
+                        <p>Il trasporto è vulnerabile ad attacchi nemici, specialmente dai "partisan" - piccoli gruppi di nemici che operano dietro le linee per interrompere le catene di rifornimento.</p>
+                        
+                        <p>Misure di sicurezza raccomandate:</p>
+                        
+                        <ul>
+                            <li><strong>Mai viaggiare soli</strong> - Organizzare convogli con veicoli armati di scorta</li>
+                            <li><strong>Utilizzare strade secondarie</strong> - Variare i percorsi per evitare imboscate</li>
+                            <li><strong>Ricognizione preventiva</strong> - Controllare il percorso prima di trasportare carichi preziosi</li>
+                            <li><strong>Postazioni QRF</strong> - Avere squadre di Quick Reaction Force pronte a rispondere agli attacchi contro i convogli logistici</li>
+                            <li><strong>Watchtowers</strong> - Costruire torri di osservazione lungo le rotte logistiche principali</li>
+                        </ul>
+                        
+                        <h2>Organizzazione Logistica nel Reggimento ITAR</h2>
+                        
+                        <p>Come Colonial, il nostro vantaggio competitivo risiede nell'efficienza logistica. Il Reggimento ITAR utilizza un sistema di organizzazione logistica a tre livelli:</p>
+                        
+                        <h3>Livello 1: Logistica di Base</h3>
+                        
+                        <p>Responsabile dell'estrazione e raffinazione di risorse, garantendo un flusso costante di materiali base. Compiti:</p>
+                        
+                        <ul>
+                            <li>Gestione delle miniere e dei giacimenti nelle regioni sicure</li>
+                            <li>Manutenzione delle raffinerie e pianificazione delle code di raffinazione</li>
+                            <li>Creazione e gestione dei depositi centrali di materiali</li>
+                        </ul>
+                        
+                        <h3>Livello 2: Produzione e Coordinamento</h3>
+                        
+                        <p>Si occupa della trasformazione dei materiali in equipaggiamento e della pianificazione logistica. Compiti:</p>
+                        
+                        <ul>
+                            <li>Gestione delle fabbriche e coordinamento della produzione</li>
+                            <li>Mantenimento degli inventari e monitoraggio delle scorte</li>
+                            <li>Pianificazione delle produzioni MPF a lungo termine</li>
+                            <li>Coordinamento con i comandanti per determinare le priorità</li>
+                        </ul>
+                        
+                        <h3>Livello 3: Distribuzione Front-line</h3>
+                        
+                        <p>Responsabile della consegna delle forniture alle truppe al fronte. Compiti:</p>
+                        
+                        <ul>
+                            <li>Trasporto di rifornimenti alle FOB e ai punti di battaglia</li>
+                            <li>Gestione delle richieste urgenti dal fronte</li>
+                            <li>Evacuazione di feriti e recupero di veicoli danneggiati</li>
+                            <li>Costruzione e mantenimento di FOB avanzate</li>
+                        </ul>
+                        
+                        <h3>Sistema di Comunicazione Logistica</h3>
+                        
+                        <p>La comunicazione è fondamentale per una logistica efficace. Il Reggimento ITAR utilizza:</p>
+                        
+                        <ul>
+                            <li><strong>Canale Discord "Richieste Logistiche"</strong> - Dove le unità in prima linea possono richiedere specifici rifornimenti</li>
+                            <li><strong>Modulo standardizzato di richiesta</strong> - Che include tipo di materiale, quantità, priorità e posizione</li>
+                            <li><strong>Mappa logistica condivisa</strong> - Con tutte le rotte, miniere, fabbriche e depositi marcati</li>
+                            <li><strong>Briefing logistico giornaliero</strong> - Per coordinare le operazioni e stabilire le priorità</li>
+                        </ul>
+                        
+                        <h2>Tecniche Avanzate di Logistica</h2>
+                        
+                        <h3>Sistema "Pull"</h3>
+                        
+                        <p>Invece di portare rifornimenti basati su supposizioni, il sistema "pull" risponde alle richieste specifiche dal fronte. Questo riduce gli sprechi e garantisce che le truppe ricevano esattamente ciò di cui hanno bisogno.</p>
+                        
+                        <h3>Depositi Satellite</h3>
+                        
+                        <p>Creare piccoli depositi di rifornimenti in posizioni strategiche vicino a potenziali fronti futuri. Questi depositi consentono una risposta rapida quando si apre un nuovo fronte.</p>
+                        
+                        <h3>Rotazione dei Logisti</h3>
+                        
+                        <p>Per prevenire il burnout (un problema reale nella logistica di Foxhole), implementiamo un sistema di rotazione dove i membri alternano ruoli di combattimento e logistica.</p>
+                        
+                        <h3>Pianificazione Just-in-Time</h3>
+                        
+                        <p>Sincronizzare la produzione e la distribuzione in modo che i rifornimenti arrivino poco prima di essere necessari, riducendo la vulnerabilità e migliorando l'efficienza dello stoccaggio.</p>
+                        
+                        <h2>Problemi Comuni e Soluzioni</h2>
+                        
+                        <h3>Backlogging (Congestione)</h3>
+                        
+                        <p><strong>Problema:</strong> Le raffinerie si intasano perché nessuno ritira i materiali raffinati.</p>
+                        
+                        <p><strong>Soluzione:</strong> Sistema di rotazione dedicato dove squadre specifiche sono responsabili del ritiro dei materiali da determinate raffinerie.</p>
+                        
+                        <h3>Partisan (Incursori nemici)</h3>
+                        
+                        <p><strong>Problema:</strong> I rifornimenti vengono intercettati da gruppi nemici dietro le linee.</p>
+                        
+                        <p><strong>Soluzione:</strong> Pattuglie regolari, watchtowers, convogli protetti e squadre QRF dedicate alla protezione delle rotte logistiche.</p>
+                        
+                        <h3>Bottlenecking (Colli di bottiglia)</h3>
+                        
+                        <p><strong>Problema:</strong> Le risorse si accumulano in un punto della catena logistica mentre scarseggiano in altri.</p>
+                        
+                        <p><strong>Soluzione:</strong> Dashboard logistica che monitora i livelli di risorse in tempo reale e permette di identificare rapidamente i colli di bottiglia.</p>
+                        
+                        <h3>Overproduction (Sovrapproduzione)</h3>
+                        
+                        <p><strong>Problema:</strong> Risorse sprecate nella produzione di oggetti già abbondanti o non necessari.</p>
+                        
+                        <p><strong>Soluzione:</strong> Controllo centralizzato degli inventari e sistema di richieste verificate prima della produzione.</p>
+                        
+                        <h2>Il Futuro della Logistica Colonial</h2>
+                        
+                        <p>Come Colonial, la nostra filosofia logistica si basa sulla flessibilità e l'adattabilità. I Warden tendono a costruire sistemi logistici più rigidi ma potenti, mentre noi eccelliamo nell'improvvisazione e nella risposta rapida alle esigenze mutevoli del campo di battaglia.</p>
+                        
+                        <p>Il Reggimento ITAR sta sviluppando questi approcci innovativi:</p>
+                        
+                        <ul>
+                            <li><strong>Logistica mobile</strong> - Unità logistiche altamente mobili che possono ridistribuirsi rapidamente dove necessario</li>
+                            <li><strong>Operazioni anfibie logistiche</strong> - Utilizzare le vie d'acqua per aggirare le linee nemiche e rifornire fronti isolati</li>
+                            <li><strong>Sistemi modulari</strong> - Basi logistiche prefabbricate che possono essere rapidamente assemblate vicino a nuovi fronti</li>
+                        </ul>
+                        
+                        <h2>Conclusione: L'Importanza della Logistica</h2>
+                        
+                        <p>La logistica è spesso descritta come "la parte non sexy" di Foxhole. Non offre l'adrenalina diretta del combattimento o la gloria immediata delle conquiste territoriali. Tuttavia, è il fondamento di tutto ciò che accade sul campo di battaglia.</p>
+                        
+                        <p>Nel Reggimento ITAR, riconosciamo e celebriamo il contributo vitale dei nostri logisti. Senza di loro, non ci sarebbero vittorie da raccontare o territori da rivendicare. Come diceva un famoso generale: "Gli amatori studiano la tattica, i professionisti studiano la logistica."</p>
+                        
+                        <p>Se vuoi contribuire allo sforzo bellico Colonial in modo significativo, considera di unirti alle nostre operazioni logistiche. Un buon logista vale quanto dieci soldati sul campo.</p>
+                        
+                        <p>Per la gloria Colonial! 🟢</p>
+                        
+                        <div class="article-tags">
+                            <a href="#" class="article-tag">foxhole</a>
+                            <a href="#" class="article-tag">logistica</a>
+                            <a href="#" class="article-tag">colonial</a>
+                            <a href="#" class="article-tag">tutorial</a>
+                            <a href="#" class="article-tag">guida</a>
+                            <a href="#" class="article-tag">itar</a>
                         </div>
-                        <h1 class="article-title">La Grande Battaglia di Endless Shore: Come ITAR ha Cambiato le Sorti della Guerra</h1>
-                    </article>
-                    
-                    <div class="article-body">
-                        <p>Il racconto dettagliato della storica battaglia di Endless Shore e del ruolo cruciale del Reggimento ITAR. Contenuto completo in arrivo presto!</p>
-                    </div>
-                `;
-            } else if (articleId === 'intervista-comandante') {
-                // Contenuto per l'intervista
-                articleContainer.innerHTML = `
-                    <article class="article-header">
-                        <div class="article-meta">
-                            <span class="article-category">Community</span>
-                            <span class="article-date"><span aria-hidden="true">📅</span> 18 Aprile 2025</span>
+                        
+                        <div class="article-author">
+                            <div class="author-avatar">
+                                <img src="icona.ico" alt="Avatar del Quartiermaster ITAR">
+                            </div>
+                            <div class="author-info">
+                                <h3 class="author-name">Quartiermaster ITAR</h3>
+                                <p class="author-bio">Responsabile delle operazioni logistiche del Reggimento ITAR. Veterano con oltre 2000 ore di gioco, specializzato in sistemi logistici avanzati e coordinamento di produzione su larga scala.</p>
+                            </div>
                         </div>
-                        <h1 class="article-title">Intervista al Comandante ITAR: La Storia e il Futuro del Reggimento Italiano</h1>
-                    </article>
-                    
-                    <div class="article-body">
-                        <p>Un'intervista esclusiva con il fondatore e comandante del Reggimento ITAR. Contenuto completo in arrivo presto!</p>
+                        
+                        <div class="related-posts">
+                            <h3 class="related-title">Articoli Correlati</h3>
+                            <div class="related-grid">
+                                <a href="#" class="related-card" onclick="showArticle('foxhole-guida-completa'); return false;">
+                                    <img src="ScreenShot00007.png" alt="Soldati Colonial in battaglia" class="related-image">
+                                    <div class="related-content">
+                                        <h4 class="related-card-title">Guida Completa a Foxhole: Tutto Quello che Devi Sapere sul MMO Strategico</h4>
+                                    </div>
+                                </a>
+                                <a href="#" class="related-card" onclick="showArticle('strategie-colonial'); return false;">
+                                    <img src="ScreenShot00006.png" alt="Carri armati Colonial in formazione" class="related-image">
+                                    <div class="related-content">
+                                        <h4 class="related-card-title">Le 5 Migliori Strategie Colonial per Vincere in Foxhole</h4>
+                                    </div>
+                                </a>
+                                <a href="#" class="related-card" onclick="showArticle('battaglia-endless-shore'); return false;">
+                                    <img src="ScreenShot00007.png" alt="Battaglia a Endless Shore" class="related-image">
+                                    <div class="related-content">
+                                        <h4 class="related-card-title">La Grande Battaglia di Endless Shore: Come ITAR ha Cambiato le Sorti della Guerra</h4>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 `;
+                            } else if (articleId === 'battaglia-endless-shore') {
+                                // Contenuto per l'articolo sulla battaglia
+                                articleContainer.innerHTML = `
+                                    <article class="article-header">
+                                        <div class="article-meta">
+                                            <span class="article-category">Reportage</span>
+                                            <span class="article-date"><span aria-hidden="true">📅</span> 25 Aprile 2025</span>
+                                        </div>
+                                        <h1 class="article-title">La Grande Battaglia di Endless Shore: Come ITAR ha Cambiato le Sorti della Guerra</h1>
+                                    </article>
+                                    
+                                    <div class="article-body">
+                                        <p>Il racconto dettagliato della storica battaglia di Endless Shore e del ruolo cruciale del Reggimento ITAR. Contenuto completo in arrivo presto!</p>
+                                    </div>
+                                `;
+                            } else if (articleId === 'intervista-comandante') {
+                                // Contenuto per l'intervista
+                                articleContainer.innerHTML = `
+                                    <article class="article-header">
+                                        <div class="article-meta">
+                                            <span class="article-category">Community</span>
+                                            <span class="article-date"><span aria-hidden="true">📅</span> 18 Aprile 2025</span>
+                                        </div>
+                                        <h1 class="article-title">Intervista al Comandante ITAR: La Storia e il Futuro del Reggimento Italiano</h1>
+                                    </article>
+                                    
+                                    <div class="article-body">
+                                        <p>Un'intervista esclusiva con il fondatore e comandante del Reggimento ITAR. Contenuto completo in arrivo presto!</p>
+                                    </div>
+                                `;
             }
             
             // Scorri fino all'inizio dell'articolo
