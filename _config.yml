@@ -1,0 +1,186 @@
+# Site settings
+title: "Foxhole Italia ITAR Regiment"
+subtitle: "#1 Clan Italiano Colonial | Reggimento Elite Foxhole ITA"
+description: >-
+  L'unico reggimento italiano dedicato ai Colonial in Foxhole. 
+  Community gaming italiana per operazioni coordinate, tattiche avanzate 
+  e divertimento in squadra nella Colonial Legion.
+
+# Site configuration
+url: "https://foxholeitaliaregiment.github.io/"
+baseurl: ""
+repository: "foxholeitaliaregiment/foxholeitaliaregiment.github.io/"
+
+# Author/Organization info
+author:
+  name: "ITAR Regiment"
+  email: "info@foxholeitaliaregiment.com"
+  bio: "Reggimento Elite Italiano per Foxhole - 100% Colonial Legion"
+
+# Social links
+social:
+  discord: "https://discord.gg/PjBqEg2ZK3"
+
+
+# Site branding
+logo: "/assets/images/itar-logo.png"
+favicon: "/assets/images/favicon.ico"
+colonial_colors:
+  primary: "#1a472a"    # Verde Colonial
+  secondary: "#2d5a3d"  # Verde scuro
+  accent: "#4a7c59"     # Verde chiaro
+
+# Jekyll settings
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+# Language and locale
+lang: it-IT
+timezone: Europe/Rome
+
+# Navigation
+navigation:
+  - title: "Home"
+    url: "/"
+  - title: "Chi Siamo"
+    url: "/about/"
+  - title: "Reclutamento"
+    url: "/recruitment/"
+  - title: "Guide"
+    url: "/guides/"
+  - title: "Eventi"
+    url: "/events/"
+  - title: "Contatti"
+    url: "/contact/"
+
+# Collections
+collections:
+  operations:
+    output: true
+    permalink: /operations/:name/
+  guides:
+    output: true
+    permalink: /guides/:name/
+  events:
+    output: true
+    permalink: /events/:name/
+
+# Defaults for posts and pages
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "ITAR Command"
+      show_excerpts: true
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: ""
+      type: "operations"
+    values:
+      layout: "operation"
+  - scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"
+
+# Foxhole specific settings
+foxhole:
+  faction: "Colonial"
+  regiment_tag: "[ITAR]"
+  server_shard: "Able"
+  recruitment_status: "Open"
+  min_rank_requirement: false
+  languages: ["Italian", "English"]
+  playstyle: ["Logistics", "Infantry", "Artillery", "Engineering"]
+
+# Game information
+game_info:
+  name: "Foxhole"
+  developer: "Siege Camp"
+  platforms: ["Steam", "PC"]
+  website: "https://www.foxholegame.com/"
+
+# SEO and metadata
+
+
+# Content settings
+excerpt_separator: "<!--more-->"
+show_excerpts: true
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Markdown settings
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+# Asset settings
+sass:
+  sass_dir: _sass
+  style: compressed
+
+# Development
+livereload: false
+incremental: false
+
+# Security
+safe: true
+whitelist:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-redirect-from
+
+# Exclude files from processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+
+# Include files
+include:
+  - _pages
+  - .htaccess
+
+# Compression
+compress_html:
+  clippings: all
+  comments: all
+  endings: all
+  startings: []
+  blanklines: false
+  profile: false
+
+# Recruitment form settings
+recruitment:
+  enabled: true
+  discord_required: true
+  age_requirement: 16
+  experience_levels: ["Beginner", "Intermediate", "Advanced", "Veteran"]
+  roles: ["Infantry", "Logistics", "Engineer", "Medic", "Artillery", "Tank Crew"]
+
+# Event calendar
+events:
+  timezone: "Europe/Rome"
+  recurring:
+    operations: "Sunday 21:00 CET"
+    training: "Wednesday 20:00 CET"
+    community: "Friday 21:30 CET"
