@@ -996,6 +996,13 @@
                             <p class="slide-description">Il nostro reggimento contribuisce con basi dedicate alla macchina da guerra della Colonial Legion.</p>
                         </div>
                     </div>
+                    <div class="carousel-slide">
+                        <img src="./amanibasse.png" alt="Base operativa Colonial costruita dal reggimento italiano ITAR in Foxhole." loading="lazy">
+                        <div class="slide-overlay">
+                            <h3 class="slide-title">Operazione "A mani basse"</h3>
+                            <p class="slide-description">Combattenti ITAR imortalati prima della partenza di una delle migliori operazioni di scouting.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             
@@ -1008,6 +1015,7 @@
                 <button class="indicator active" onclick="goToSlide(0)" aria-label="Vai alla prima immagine"></button>
                 <button class="indicator" onclick="goToSlide(1)" aria-label="Vai alla seconda immagine"></button>
                 <button class="indicator" onclick="goToSlide(2)" aria-label="Vai alla terza immagine"></button>
+                <button class="indicator" onclick="goToSlide(3)" aria-label="Vai alla quarta immagine"></button>
             </div>
         </section>
 
@@ -1074,7 +1082,7 @@
 
     <script>
         let currentSlide = 0;
-        const totalSlides = 3;
+        const totalSlides = 4;
         let autoPlayInterval;
 
         // Precarica le immagini per migliorare la performance
@@ -1082,7 +1090,8 @@
             const imagesToPreload = [
                 './ScreenShot00007.png',
                 './ScreenShot00006.png',
-                './e4uv57nuxip91.webp'
+                './e4uv57nuxip91.webp',
+                './amanibasse.png'
             ];
             
             imagesToPreload.forEach(src => {
