@@ -137,7 +137,7 @@ livereload: false
 incremental: false
 
 # Security
-safe: true
+safe: false
 whitelist:
   - jekyll-feed
   - jekyll-sitemap
