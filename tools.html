@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITAR | ARSENALE STRUMENTI</title>
+    <link rel="icon" href="./icona.ico" sizes="any">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAV (Identical to index.html) -->
+    <nav class="cinematic-nav">
+        <div class="nav-logo">ITAR</div>
+        <div class="nav-items">
+            <a href="index.html">HOME</a>
+            <a href="index.html#war-room">WAR ROOM</a>
+            <a href="war-status.html">WAR STATUS</a>
+            <a href="tools.html" style="color: var(--col-highlight);">ARSENALE</a>
+        </div>
+        <a href="https://discord.gg/PjBqEg2ZK3" target="_blank" class="nav-cta">DISCORD</a>
+
+        <div class="mobile-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu (Identical to index.html) -->
+    <div class="mobile-menu">
+        <a href="index.html">HOME</a>
+        <a href="index.html#war-room">WAR ROOM</a>
+        <a href="war-status.html">WAR STATUS</a>
+        <a href="tools.html">ARSENALE</a>
+        <a href="https://discord.gg/PjBqEg2ZK3" target="_blank" class="mobile-btn">
+            <i class="fab fa-discord"></i> DISCORD
+        </a>
+    </div>
+
+    <!-- HERO SECTION (Same style as index.html) -->
+    <section class="hero-cinematic" style="min-height: 60vh;">
+        <div class="hero-bg"
+            style="background-image: url('./20250522230207_1.jpg'); filter: grayscale(50%) brightness(0.4);"></div>
+        <div class="overlay-dark"></div>
+        <div class="hero-content" style="padding-top: 120px;">
+            <h2 class="hero-sup">🛠️ STRUMENTI & CALCOLATORI</h2>
+            <h1 class="giant-text">ARSENALE<br>ITAR</h1>
+            <p class="hero-statement">
+                Strumenti costruiti da ITAR e risorse della community Foxhole.<br>
+                Tutto ciò che serve al tuo reggimento, in un unico posto.
+            </p>
+        </div>
+    </section>
+
+    <!-- TOOLS SECTION (Same pattern as manifesto-section) -->
+    <section class="manifesto-section" id="tools-main" style="padding: 80px 5%;">
+        <div class="container-fluid">
+
+            <!-- ITAR CUSTOM TOOLS -->
+            <div style="margin-bottom: 80px;">
+                <h2 class="section-glitch" style="text-align: center;">STRUMENTI<br>ITAR</h2>
+                <h3 class="sub-heading-seo" style="text-align: center; margin-bottom: 40px;">CALCOLATORI INTEGRATI •
+                    FUNZIONANO OFFLINE</h3>
+
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto;">
+
+                    <!-- ARTILLERY CALCULATOR (ENHANCED) -->
+                    <div
+                        style="background: rgba(255,255,255,0.02); border: 2px solid var(--col-highlight); padding: 30px;">
+                        <h3
+                            style="font-family: var(--font-impact); font-size: 1.8rem; color: #fff; margin-bottom: 5px;">
+                            <i class="fas fa-crosshairs" style="color: var(--col-highlight);"></i> CALCOLATORE
+                            ARTIGLIERIA AVANZATO
+                        </h3>
+                        <p style="color: #666; margin-bottom: 20px; font-size: 0.85rem;">Ispirato a ArtilleryCalc •
+                            Include compensazione vento</p>
+
+                        <!-- Row 1: Artillery Type -->
+                        <div style="margin-bottom: 15px;">
+                            <label
+                                style="color: #888; font-size: 0.75rem; display: block; margin-bottom: 5px; text-transform: uppercase;">Tipo
+                                Artiglieria</label>
+                            <select id="artyType"
+                                style="width: 100%; padding: 12px; background: #0a0a0a; border: 1px solid #333; color: #fff; font-family: var(--font-heading);">
+                                <optgroup label="🟢 Colonial">
+                                    <option value="koronides">120-68 "Koronides" Field Gun (100-250m)</option>
+                                    <option value="sarissa">Lance-46 "Sarissa" 150mm (100-300m)</option>
+                                    <option value="mortar">Cremari Mortar (45-80m)</option>
+                                </optgroup>
+                                <optgroup label="🔵 Warden">
+                                    <option value="lariat">Huber Lariat 120mm (100-300m)</option>
+                                    <option value="exalt">Huber Exalt 150mm (100-300m)</option>
+                                </optgroup>
+                                <optgroup label="⚡ Heavy (300mm)">
+                                    <option value="storm">Storm Cannon (400-1000m)</option>
+                                    <option value="tempest">Tempest Cannon RA-2 (350-500m)</option>
+                                </optgroup>
+                            </select>
+                        </div>
+
+                        <!-- Row 2: Distance & Azimuth -->
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                            <div>
+                                <label
+                                    style="color: #888; font-size: 0.75rem; display: block; margin-bottom: 5px; text-transform: uppercase;">Distanza
+                                    (m)</label>
+                                <input type="number" id="artyDistance" placeholder="es. 150"
+                                    style="width: 100%; padding: 12px; background: #0a0a0a; border: 1px solid #333; color: #fff; font-family: var(--font-heading);">
+                            </div>
+                            <div>
+                                <label
+                                    style="color: #888; font-size: 0.75rem; display: block; margin-bottom: 5px; text-transform: uppercase;">Azimut
+                                    (gradi)</label>
+                                <input type="number" id="artyAzimuth" placeholder="0-360" min="0" max="360"
+                                    style="width: 100%; padding: 12px; background: #0a0a0a; border: 1px solid #333; color: #fff; font-family: var(--font-heading);">
+                            </div>
+                        </div>
+
+                        <!-- Row 3: Wind Direction -->
+                        <div style="margin-bottom: 20px;">
+                            <label
+                                style="color: #888; font-size: 0.75rem; display: block; margin-bottom: 5px; text-transform: uppercase;"><i
+                                    class="fas fa-wind"></i> Direzione Vento</label>
+                            <select id="windDir"
+                                style="width: 100%; padding: 12px; background: #0a0a0a; border: 1px solid #333; color: #fff; font-family: var(--font-heading);">
+                                <option value="0">Nessun Vento</option>
+                                <option value="0">↑ Nord (0°)</option>
+                                <option value="45">↗ Nord-Est (45°)</option>
+                                <option value="90">→ Est (90°)</option>
+                                <option value="135">↘ Sud-Est (135°)</option>
+                                <option value="180">↓ Sud (180°)</option>
+                                <option value="225">↙ Sud-Ovest (225°)</option>
+                                <option value="270">← Ovest (270°)</option>
+                                <option value="315">↖ Nord-Ovest (315°)</option>
+                            </select>
+                        </div>
+
+                        <!-- Row 4: Visual Wind Strength Selector -->
+                        <div style="margin-bottom: 25px;">
+                            <label
+                                style="color: #888; font-size: 0.75rem; display: block; margin-bottom: 10px; text-transform: uppercase;">Intensità
+                                Vento (Clicca per selezionare)</label>
+                            <div class="wind-selector" id="windSelector">
+                                <!-- Generated by JS -->
+                            </div>
+                            <input type="hidden" id="windStrength" value="0">
+                            <div id="windStrengthDisplay"
+                                style="color: var(--col-highlight); font-family: var(--font-heading); margin-top: 5px; font-size: 0.9rem;">
+                                Nessun Vento (0)</div>
+                        </div>
+
+                        <button id="artyBtn"
+                            style="width: 100%; padding: 15px; background: var(--col-highlight); border: none; color: #fff; font-family: var(--font-heading); cursor: pointer; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px;">
+                            <i class="fas fa-bullseye"></i> CALCOLA SOLUZIONE DI TIRO
+                        </button>
+
+                        <div id="artyResult"
+                            style="margin-top: 20px; padding: 20px; background: rgba(117,146,66,0.15); border: 1px solid var(--col-highlight); display: none;">
+                            <div
+                                style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 15px; text-align: center;">
+                                <div style="background: rgba(0,0,0,0.3); padding: 15px;">
+                                    <div style="color: #888; font-size: 0.7rem; text-transform: uppercase;">Elevazione
+                                    </div>
+                                    <div id="artyElevation"
+                                        style="font-size: 2.5rem; color: var(--col-highlight); font-family: var(--font-impact);">
+                                    </div>
+                                </div>
+                                <div style="background: rgba(0,0,0,0.3); padding: 15px;">
+                                    <div style="color: #888; font-size: 0.7rem; text-transform: uppercase;">Azimut
+                                        Corretto</div>
+                                    <div id="artyAzimuthResult"
+                                        style="font-size: 2.5rem; color: #66b3ff; font-family: var(--font-impact);">
+                                    </div>
+                                </div>
+                                <div style="background: rgba(0,0,0,0.3); padding: 15px;">
+                                    <div style="color: #888; font-size: 0.7rem; text-transform: uppercase;">Offset Vento
+                                    </div>
+                                    <div id="artyWindCorr"
+                                        style="font-size: 2.5rem; color: #ffcc00; font-family: var(--font-impact);">
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="artyRange"
+                                style="color: #666; font-size: 0.8rem; margin-top: 15px; text-align: center;"></div>
+                        </div>
+                    </div>
+
+                    <!-- CSS for Wind Sprite Sheet -->
+                    <style>
+                        .wind-selector {
+                            display: flex;
+                            gap: 10px;
+                            flex-wrap: wrap;
+                        }
+
+                        .wind-option {
+                            width: 85px;
+                            /* Approx width of one flag in sprite */
+                            height: 85px;
+                            /* Approx height */
+                            background-image: url('windgif.gif');
+                            background-size: 256px 170px;
+                            /* Adjust based on sprite sheet size */
+                            cursor: pointer;
+                            border: 2px solid transparent;
+                            opacity: 0.6;
+                            transition: all 0.2s;
+                        }
+
+                        .wind-option:hover {
+                            opacity: 1;
+                            transform: scale(1.05);
+                        }
+
+                        .wind-option.selected {
+                            border-color: var(--col-highlight);
+                            opacity: 1;
+                            box-shadow: 0 0 10px var(--col-highlight);
+                        }
+
+                        /* Sprite Positions */
+                        .wind-opt-0 {
+                            display: none;
+                        }
+
+                        /* No image for 0 */
+                        .wind-opt-1 {
+                            background-position: 0 0;
+                        }
+
+                        .wind-opt-2 {
+                            background-position: -85px 0;
+                        }
+
+                        .wind-opt-3 {
+                            background-position: -170px 0;
+                        }
+
+                        .wind-opt-4 {
+                            background-position: 0 -85px;
+                        }
+
+                        .wind-opt-5 {
+                            background-position: -85px -85px;
+                        }
+                    </style>
+
+                    <script>
+                        // Wind Selector Logic
+                        const windSelector = document.getElementById('windSelector');
+                        const windStrengthInput = document.getElementById('windStrength');
+                        const windDisplay = document.getElementById('windStrengthDisplay');
+
+                        // Create options 1-5
+                        for (let i = 1; i <= 5; i++) {
+                            const div = document.createElement('div');
+                            div.className = `wind-option wind-opt-${i}`;
+                            div.onclick = () => selectWind(i, div);
+                            windSelector.appendChild(div);
+                        }
+
+                        function selectWind(strength, element) {
+                            // Toggle off if clicking same
+                            if (element.classList.contains('selected')) {
+                                element.classList.remove('selected');
+                                windStrengthInput.value = 0;
+                                windDisplay.innerText = "Nessun Vento (0)";
+                            } else {
+                                document.querySelectorAll('.wind-option').forEach(el => el.classList.remove('selected'));
+                                element.classList.add('selected');
+                                windStrengthInput.value = strength;
+                                // Estimate wind offset roughly based on strength level
+                                const estimatedMeters = strength * 12; // Increased to 12m per level
+                                windDisplay.innerText = `Livello ${strength} (Offset stimato: ~${estimatedMeters}m)`;
+                            }
+                        }
+
+                        // Override Default Artillery JS
+                        document.getElementById('artyBtn').onclick = function () {
+                            const type = document.getElementById('artyType').value;
+                            const dist = parseFloat(document.getElementById('artyDistance').value);
+                            const az = parseFloat(document.getElementById('artyAzimuth').value);
+                            const windDir = parseFloat(document.getElementById('windDir').value);
+                            const windLevel = parseInt(document.getElementById('windStrength').value) || 0;
+
+                            const data = artyData[type];
+
+                            if (!dist || dist < data.minDist || dist > data.maxDist) {
+                                alert(`⚠️ Range non valido! (Min: ${data.minDist}m - Max: ${data.maxDist}m)`);
+                                return;
+                            }
+
+                            // 1. ELEVATION (Linear Interpolation)
+                            const ratio = (dist - data.minDist) / (data.maxDist - data.minDist);
+                            const elevation = Math.round(data.maxElev - (ratio * (data.maxElev - data.minElev)));
+
+                            // 2. WIND CORRECTION (Wiki-Verified Formula)
+                            let finalAz = az;
+                            let windCorrection = 0;
+
+                            if (windLevel > 0 && az !== undefined) {
+                                // Base offset ~3° per level at 80m (Mortar Range)
+                                // Scales linearly with distance (Longer flight = more drift)
+                                const baseOffsetPerLevel = 3;
+                                const distanceScale = dist / 80;
+                                const windOffsetDegrees = windLevel * baseOffsetPerLevel * distanceScale;
+
+                                // Calculate angle difference (Wind Direction vs Firing Azimuth)
+                                const angleDiff = ((windDir - az) + 360) % 360;
+                                // Perpendicular component (sin of angle diff)
+                                // If Wind is 90° right of Azimuth, sin is 1 -> pushes shell Left -> Correction must be Right (+)
+                                // Wait, if wind pushes Left, shell lands Left. To hit Target, we must aim Right.
+                                // Logic: Wind Push = sin(angleDiff) * Force.
+                                // If Wind is from Right (90), Push is Left (-).
+                                // Correction = -Push. So Correction is Right (+).
+                                const perpFactor = Math.sin(angleDiff * Math.PI / 180);
+
+                                // Correction opposes the wind push
+                                windCorrection = -1 * perpFactor * windOffsetDegrees;
+                                finalAz = ((az + windCorrection) + 360) % 360;
+                            }
+
+                            // Calculate display correction (e.g. +5.0° or -3.2°)
+                            // Normalize correction to -180 to +180 range for display
+                            let displayCorrection = windCorrection;
+                            // (Simplification: windCorrection is already relative, no need to wrap unless it's huge)
+
+                            // RESULT
+                            document.getElementById('artyResult').style.display = 'block';
+                            document.getElementById('artyElevation').innerText = elevation;
+                            document.getElementById('artyAzimuthResult').innerText = finalAz.toFixed(1) + "°";
+
+                            const sign = displayCorrection >= 0 ? "+" : "";
+                            document.getElementById('artyWindCorr').innerText = `${sign}${displayCorrection.toFixed(1)}°`;
+                            document.getElementById('artyRange').innerHTML = `<b>${data.name}</b> • Target: ${dist}m, Inaccuracy: ${data.inaccuracy || 'N/A'}`;
+                        };
+                    </script>
+
+                    <!-- LOGISTICS CALCULATOR -->
+                    <div
+                        style="background: rgba(255,255,255,0.02); border: 2px solid var(--col-highlight); padding: 30px;">
+                        <h3
+                            style="font-family: var(--font-impact); font-size: 1.8rem; color: #fff; margin-bottom: 10px;">
+                            <i class="fas fa-boxes" style="color: var(--col-highlight);"></i> CALCOLATORE LOGISTICA
+                        </h3>
+                        <p style="color: #888; margin-bottom: 25px;">Seleziona oggetto + quantità → Vedi materiali
+                            necessari</p>
+
+                        <div style="display: grid; grid-template-columns: 2fr 1fr; gap: 15px; margin-bottom: 20px;">
+                            <div>
+                                <label
+                                    style="color: #666; font-size: 0.8rem; display: block; margin-bottom: 5px; text-transform: uppercase;">Oggetto
+                                    da Produrre</label>
+                                <select id="logiItem"
+                                    style="width: 100%; padding: 12px; background: #0a0a0a; border: 1px solid #333; color: #fff; font-family: var(--font-heading); font-size: 1rem;">
+                                    <optgroup label="🔫 Armi">
+                                        <option value="rifle">Rifle (x20)</option>
+                                        <option value="smg">SMG (x20)</option>
+                                        <option value="lmg">LMG (x10)</option>
+                                        <option value="atrifle">Anti-Tank Rifle (x10)</option>
+                                    </optgroup>
+                                    <optgroup label="💥 Munizioni">
+                                        <option value="7.62">7.62mm Crate</option>
+                                        <option value="9mm">9mm Crate</option>
+                                        <option value="12.7">12.7mm Crate</option>
+                                        <option value="shells">Artillery Shells (x5)</option>
+                                    </optgroup>
+                                    <optgroup label="🚛 Veicoli">
+                                        <option value="truck">Truck</option>
+                                        <option value="halftrack">Halftrack</option>
+                                        <option value="tank">Light Tank</option>
+                                    </optgroup>
+                                </select>
+                            </div>
+                            <div>
+                                <label
+                                    style="color: #666; font-size: 0.8rem; display: block; margin-bottom: 5px; text-transform: uppercase;">Quantità</label>
+                                <input type="number" id="logiQty" value="1" min="1"
+                                    style="width: 100%; padding: 12px; background: #0a0a0a; border: 1px solid #333; color: #fff; font-family: var(--font-heading); font-size: 1rem;">
+                            </div>
+                        </div>
+
+                        <button id="logiBtn"
+                            style="width: 100%; padding: 15px; background: var(--col-highlight); border: none; color: #fff; font-family: var(--font-heading); cursor: pointer; font-size: 1.1rem; text-transform: uppercase; letter-spacing: 2px;">
+                            <i class="fas fa-calculator"></i> CALCOLA MATERIALI
+                        </button>
+
+                        <div id="logiResult"
+                            style="margin-top: 25px; padding: 20px; background: rgba(117,146,66,0.15); border: 1px solid var(--col-highlight); display: none;">
+                            <div style="color: #888; font-size: 0.9rem; margin-bottom: 15px; text-align: center;">
+                                MATERIALI NECESSARI</div>
+                            <div id="logiMaterials"
+                                style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px;"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- EXTERNAL TOOLS SECTION -->
+            <div>
+                <h2 class="section-glitch" style="text-align: center;">RISORSE<br>COMMUNITY</h2>
+                <h3 class="sub-heading-seo" style="text-align: center; margin-bottom: 20px;">STRUMENTI ESTERNI DELLA
+                    COMMUNITY FOXHOLE</h3>
+
+                <!-- Search & Filter -->
+                <div style="display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 40px;">
+                    <input type="text" id="searchBox" placeholder="🔍 Cerca strumento..."
+                        style="padding: 12px 20px; background: rgba(255,255,255,0.05); border: 1px solid #333; color: #fff; font-family: var(--font-heading); width: 250px;">
+                    <button class="filter-btn active" data-filter="all">Tutti</button>
+                    <button class="filter-btn" data-filter="logistics">Logistica</button>
+                    <button class="filter-btn" data-filter="artillery">Artiglieria</button>
+                    <button class="filter-btn" data-filter="facilities">Facilities</button>
+                    <button class="filter-btn" data-filter="ingame">In-Game</button>
+                    <button class="filter-btn" data-filter="maps">Mappe</button>
+                    <button class="filter-btn" data-filter="misc">Altro</button>
+                </div>
+
+                <!-- Tools Grid -->
+                <div id="toolsGrid"
+                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto;">
+
+                    <!-- Tool Cards -->
+                    <div class="tool-card" data-category="logistics">
+                        <div class="tool-icon"><i class="fas fa-calculator"></i></div>
+                        <div class="tool-name">Foxhole Logistics</div>
+                        <div class="tool-desc">Calcola materiali necessari per produrre oggetti.</div>
+                        <div class="tool-author">Community</div>
+                        <a href="https://foxholelogi.com/" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="logistics">
+                        <div class="tool-icon"><i class="fas fa-industry"></i></div>
+                        <div class="tool-name">Foxhole Efficiency</div>
+                        <div class="tool-desc">Requisiti risorse per facilities.</div>
+                        <div class="tool-author">Community</div>
+                        <a href="https://www.foxhole-efficiency.com/" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="logistics">
+                        <div class="tool-icon"><i class="fas fa-share-alt"></i></div>
+                        <div class="tool-name">FoxholeHQ Factory</div>
+                        <div class="tool-desc">Pianifica e condividi code di produzione.</div>
+                        <div class="tool-author">FoxholeHQ Team</div>
+                        <a href="https://foxholehq.net/factory" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="facilities">
+                        <div class="tool-icon"><i class="fas fa-building"></i></div>
+                        <div class="tool-name">Foxhole Planner</div>
+                        <div class="tool-desc">Sito per pianificare facilities.</div>
+                        <div class="tool-author">Community</div>
+                        <a href="https://foxholeplanner.com/" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="facilities">
+                        <div class="tool-icon"><i class="fas fa-coins"></i></div>
+                        <div class="tool-name">Facility Cost Calc</div>
+                        <div class="tool-desc">Calcola costi costruzione facilities.</div>
+                        <div class="tool-author">MrBazlow</div>
+                        <a href="https://mrbazlow.github.io/CalcSite/" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="artillery">
+                        <div class="tool-icon"><i class="fas fa-crosshairs"></i></div>
+                        <div class="tool-name">FHArty</div>
+                        <div class="tool-desc">Calcolatore artiglieria basato su mappa.</div>
+                        <div class="tool-author">Community</div>
+                        <a href="https://fharty.com/" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="artillery">
+                        <div class="tool-icon"><i class="fas fa-wind"></i></div>
+                        <div class="tool-name">ArtilleryCalc</div>
+                        <div class="tool-desc">Calcoli vento e visualizzazione!</div>
+                        <div class="tool-author">Albert-B-B</div>
+                        <a href="https://albert-b-b.github.io/ArtilleryCalc/" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="ingame">
+                        <div class="tool-icon"><i class="fas fa-layer-group"></i></div>
+                        <div class="tool-name">FoxholeTool</div>
+                        <div class="tool-desc">Overlay in-game con strumenti QOL.</div>
+                        <div class="tool-author">mmaenz</div>
+                        <a href="https://github.com/mmaenz/FoxholeTool" target="_blank" class="tool-link">GITHUB <i
+                                class="fab fa-github"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="ingame">
+                        <div class="tool-icon"><i class="fas fa-file-excel"></i></div>
+                        <div class="tool-name">Stockpiler</div>
+                        <div class="tool-desc">Trascrivi scorte in Excel.</div>
+                        <div class="tool-author">tehruttiger</div>
+                        <a href="https://github.com/tehruttiger/Stockpiler" target="_blank" class="tool-link">GITHUB <i
+                                class="fab fa-github"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="maps">
+                        <div class="tool-icon"><i class="fas fa-map-marked-alt"></i></div>
+                        <div class="tool-name">FoxholeHQ Map</div>
+                        <div class="tool-desc">Mappa interattiva con filtri.</div>
+                        <div class="tool-author">FoxholeHQ Team</div>
+                        <a href="https://foxholehq.com/" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="maps">
+                        <div class="tool-icon"><i class="fas fa-warehouse"></i></div>
+                        <div class="tool-name">Stockpile Map</div>
+                        <div class="tool-desc">Condividi codici scorte visualmente.</div>
+                        <div class="tool-author">FoxholeHQ Team</div>
+                        <a href="https://foxholehq.net/stockpile" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <!-- MISSING TOOLS ADDED -->
+
+                    <div class="tool-card" data-category="logistics">
+                        <div class="tool-icon"><i class="fas fa-boxes"></i></div>
+                        <div class="tool-name">Another Logi Calculator</div>
+                        <div class="tool-desc">Calcolatore logistico alternativo.</div>
+                        <div class="tool-author">Nicolas Barlogis</div>
+                        <a href="https://nicolasbarlogis.github.io/foxhole-logi-calculator/" target="_blank"
+                            class="tool-link">APRI <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="logistics">
+                        <div class="tool-icon"><i class="fas fa-percentage"></i></div>
+                        <div class="tool-name">S.H.A.R.T.</div>
+                        <div class="tool-desc">Calcola drop rate tecnologia con autenticazione.</div>
+                        <div class="tool-author">MisfitMaid</div>
+                        <a href="https://scroop.misfitmaid.com/" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="misc">
+                        <div class="tool-icon"><i class="fas fa-wrench"></i></div>
+                        <div class="tool-name">Foxhole Stuff</div>
+                        <div class="tool-desc">Strumenti vari per diversi scopi.</div>
+                        <div class="tool-author">Community</div>
+                        <a href="https://www.foxholestuff.com/" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="misc">
+                        <div class="tool-icon"><i class="fas fa-camera"></i></div>
+                        <div class="tool-name">Foxhole Screenparse</div>
+                        <div class="tool-desc">Estrai contenuti scorte da screenshot.</div>
+                        <div class="tool-author">pogobanane</div>
+                        <a href="https://github.com/pogobanane/foxhole-screenparse" target="_blank"
+                            class="tool-link">GITHUB <i class="fab fa-github"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="misc">
+                        <div class="tool-icon"><i class="fas fa-chart-bar"></i></div>
+                        <div class="tool-name">Inventory Report</div>
+                        <div class="tool-desc">Genera report grafici da screenshot scorte.</div>
+                        <div class="tool-author">gicode</div>
+                        <a href="https://fir.gicode.net/" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="misc">
+                        <div class="tool-icon"><i class="fas fa-compass"></i></div>
+                        <div class="tool-name">Political Compass</div>
+                        <div class="tool-desc">Quanto sei nazionalista? Test divertente.</div>
+                        <div class="tool-author">TFMVulpus</div>
+                        <a href="https://tfmvulpus.github.io/political-compass/" target="_blank" class="tool-link">APRI
+                            <i class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="maps">
+                        <div class="tool-icon"><i class="fas fa-globe"></i></div>
+                        <div class="tool-name">FoxholeHQ Multi-Tool</div>
+                        <div class="tool-desc">Logi Calculator, Map, 3D Viewer, Chrome Extension.</div>
+                        <div class="tool-author">FoxholeHQ Team</div>
+                        <a href="https://foxholehq.com/" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="artillery">
+                        <div class="tool-icon"><i class="fas fa-ruler-combined"></i></div>
+                        <div class="tool-name">ArtySpotter</div>
+                        <div class="tool-desc">Calcolatore artiglieria trigonometrico.</div>
+                        <div class="tool-author">arubinofaux</div>
+                        <a href="https://github.com/arubinofaux/artyspotter" target="_blank" class="tool-link">GITHUB <i
+                                class="fab fa-github"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="artillery">
+                        <div class="tool-icon"><i class="fab fa-windows"></i></div>
+                        <div class="tool-name">Foxhole Artillery App</div>
+                        <div class="tool-desc">Calcolatore in-game con overlay Windows.</div>
+                        <div class="tool-author">XeniacDev</div>
+                        <a href="https://github.com/XeniacDev/FoxholeArtillery-Windows" target="_blank"
+                            class="tool-link">GITHUB <i class="fab fa-github"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="ingame">
+                        <div class="tool-icon"><i class="fab fa-discord"></i></div>
+                        <div class="tool-name">Storeman-Bot</div>
+                        <div class="tool-desc">Bot Discord collegato a Stockpiler.</div>
+                        <div class="tool-author">Tkaixiang</div>
+                        <a href="https://github.com/Tkaixiang/Storeman-Bot" target="_blank" class="tool-link">GITHUB <i
+                                class="fab fa-github"></i></a>
+                    </div>
+
+                    <div class="tool-card" data-category="misc">
+                        <div class="tool-icon"><i class="fas fa-cube"></i></div>
+                        <div class="tool-name">3D Model Viewer</div>
+                        <div class="tool-desc">Visualizzatore 3D modelli Foxhole.</div>
+                        <div class="tool-author">FoxholeHQ Team</div>
+                        <a href="https://foxholehq.com/" target="_blank" class="tool-link">APRI <i
+                                class="fas fa-external-link-alt"></i></a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER (Same as index.html) -->
+    <footer class="brutalist-footer">
+        <div class="footer-left">
+            <span class="footer-brand">ITAR</span>
+            <span class="footer-sub">REGGIMENTO FOXHOLE ITALIA</span>
+        </div>
+        <div class="footer-right">
+            <a href="https://discord.gg/PjBqEg2ZK3" target="_blank"><i class="fab fa-discord"></i></a>
+        </div>
+    </footer>
+
+    <style>
+        /* Tool Card Styles */
+        .tool-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid #222;
+            padding: 25px;
+            transition: all 0.3s;
+        }
+
+        .tool-card:hover {
+            border-color: var(--col-highlight);
+            transform: translateY(-3px);
+        }
+
+        .tool-icon {
+            font-size: 2rem;
+            color: var(--col-highlight);
+            margin-bottom: 15px;
+        }
+
+        .tool-name {
+            font-family: var(--font-heading);
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+
+        .tool-desc {
+            color: #888;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        .tool-author {
+            font-size: 0.75rem;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .tool-link {
+            display: inline-block;
+            background: transparent;
+            border: 1px solid #444;
+            color: #fff;
+            padding: 8px 20px;
+            text-decoration: none;
+            font-family: var(--font-heading);
+            font-size: 0.85rem;
+            transition: all 0.3s;
+        }
+
+        .tool-link:hover {
+            background: var(--col-highlight);
+            border-color: var(--col-highlight);
+        }
+
+        /* Filter Buttons */
+        .filter-btn {
+            background: transparent;
+            border: 1px solid #444;
+            color: #888;
+            padding: 10px 18px;
+            font-family: var(--font-heading);
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: var(--col-highlight);
+            border-color: var(--col-highlight);
+            color: #fff;
+        }
+
+        @media(max-width: 768px) {
+            .giant-text {
+                font-size: 3rem !important;
+            }
+
+            #toolsGrid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+
+    <script>
+        // ============ NAVIGATION ============
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const nav = document.querySelector('.cinematic-nav');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                const icon = mobileToggle.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // ============ ARTILLERY DATA (WIKI-VERIFIED) ============
+        const artyData = {
+            // Colonial (Source: foxhole.wiki.gg)
+            'koronides': { minDist: 100, maxDist: 250, minElev: 300, maxElev: 600, name: '120-68 "Koronides" Field Gun', inaccuracy: '5-10m' },
+            'sarissa': { minDist: 100, maxDist: 300, minElev: 200, maxElev: 800, name: 'Lance-46 "Sarissa" 150mm', inaccuracy: '5-12m' },
+            'mortar': { minDist: 45, maxDist: 80, minElev: 450, maxElev: 900, name: 'Cremari Mortar', inaccuracy: '5.5-12m' },
+            // Warden
+            'lariat': { minDist: 100, maxDist: 300, minElev: 200, maxElev: 800, name: 'Huber Lariat 120mm', inaccuracy: '5-10m' },
+            'exalt': { minDist: 100, maxDist: 300, minElev: 200, maxElev: 800, name: 'Huber Exalt 150mm', inaccuracy: '5-12m' },
+            // Heavy 300mm
+            'storm': { minDist: 400, maxDist: 1000, minElev: 100, maxElev: 900, name: 'Storm Cannon', inaccuracy: '10-25m' },
+            'tempest': { minDist: 350, maxDist: 500, minElev: 200, maxElev: 600, name: 'Tempest Cannon RA-2', inaccuracy: '10-20m' }
+        };
+
+        document.getElementById('artyBtn').addEventListener('click', function () {
+            const type = document.getElementById('artyType').value;
+            const distance = parseFloat(document.getElementById('artyDistance').value);
+            const azimuth = parseFloat(document.getElementById('artyAzimuth').value) || 0;
+            const windDir = parseFloat(document.getElementById('windDir').value);
+            const windStrength = parseFloat(document.getElementById('windStrength').value) || 0;
+            const data = artyData[type];
+
+            if (!data) {
+                alert('⚠️ Seleziona un tipo di artiglieria valido');
+                return;
+            }
+
+            if (!distance || distance < data.minDist || distance > data.maxDist) {
+                alert('⚠️ Distanza non valida!\n\nRange per ' + data.name + ': ' + data.minDist + 'm - ' + data.maxDist + 'm');
+                return;
+            }
+
+            // Linear interpolation for elevation
+            const ratio = (distance - data.minDist) / (data.maxDist - data.minDist);
+            const elevation = Math.round(data.maxElev - (ratio * (data.maxElev - data.minElev)));
+
+            // Wind compensation calculation (FIXED - more realistic values)
+            // Wind affects azimuth based on perpendicular component and distance
+            let windCorrection = 0;
+            if (windStrength > 0 && azimuth > 0) {
+                // Calculate angle difference between azimuth and wind direction
+                const angleDiff = (windDir - azimuth + 360) % 360;
+                // Wind effect is strongest when perpendicular (90° or 270°), zero when parallel
+                const perpEffect = Math.sin(angleDiff * Math.PI / 180);
+                // Distance factor: longer shots are more affected (normalized to 100-500m range)
+                const distFactor = Math.min(distance / 200, 2.5);
+                // Realistic multiplier: ~2.5 degrees per wind strength unit for perpendicular wind at max range
+                windCorrection = Math.round(perpEffect * windStrength * distFactor * 1.0);
+            }
+
+            const correctedAzimuth = ((azimuth - windCorrection) + 360) % 360;
+
+            // Display results
+            document.getElementById('artyResult').style.display = 'block';
+            document.getElementById('artyElevation').textContent = elevation;
+            document.getElementById('artyAzimuthResult').textContent = correctedAzimuth.toFixed(1) + '°';
+            document.getElementById('artyWindCorr').textContent = (windCorrection >= 0 ? '+' : '') + windCorrection + '°';
+            document.getElementById('artyRange').textContent = '📍 ' + data.name + ' | Range: ' + data.minDist + 'm - ' + data.maxDist + 'm';
+        });
+
+        // ============ LOGISTICS CALCULATOR ============
+        const logiData = {
+            'rifle': { bmat: 100, emat: 0, rmat: 0 },
+            'smg': { bmat: 120, emat: 0, rmat: 0 },
+            'lmg': { bmat: 150, emat: 0, rmat: 0 },
+            'atrifle': { bmat: 100, emat: 0, rmat: 25 },
+            '7.62': { bmat: 40, emat: 0, rmat: 0 },
+            '9mm': { bmat: 40, emat: 0, rmat: 0 },
+            '12.7': { bmat: 80, emat: 0, rmat: 0 },
+            'shells': { bmat: 0, emat: 60, rmat: 0 },
+            'truck': { bmat: 100, emat: 0, rmat: 0 },
+            'halftrack': { bmat: 120, emat: 0, rmat: 20 },
+            'tank': { bmat: 0, emat: 0, rmat: 165 }
+        };
+
+        document.getElementById('logiBtn').addEventListener('click', function () {
+            const item = document.getElementById('logiItem').value;
+            const qty = parseInt(document.getElementById('logiQty').value) || 1;
+            const data = logiData[item];
+
+            const totalBmat = data.bmat * qty;
+            const totalEmat = data.emat * qty;
+            const totalRmat = data.rmat * qty;
+
+            const materialsDiv = document.getElementById('logiMaterials');
+            materialsDiv.innerHTML = '';
+
+            if (totalBmat > 0) {
+                materialsDiv.innerHTML += `<div style="background: rgba(102,179,255,0.1); padding: 15px; text-align: center; border: 1px solid #66b3ff;">
+                    <div style="color: #66b3ff; font-size: 0.7rem; text-transform: uppercase;">Basic Materials</div>
+                    <div style="font-size: 2.5rem; color: #66b3ff; font-family: var(--font-impact);">${totalBmat.toLocaleString()}</div>
+                </div>`;
+            }
+            if (totalEmat > 0) {
+                materialsDiv.innerHTML += `<div style="background: rgba(255,204,0,0.1); padding: 15px; text-align: center; border: 1px solid #ffcc00;">
+                    <div style="color: #ffcc00; font-size: 0.7rem; text-transform: uppercase;">Explosive Materials</div>
+                    <div style="font-size: 2.5rem; color: #ffcc00; font-family: var(--font-impact);">${totalEmat.toLocaleString()}</div>
+                </div>`;
+            }
+            if (totalRmat > 0) {
+                materialsDiv.innerHTML += `<div style="background: rgba(255,102,102,0.1); padding: 15px; text-align: center; border: 1px solid #ff6666;">
+                    <div style="color: #ff6666; font-size: 0.7rem; text-transform: uppercase;">Refined Materials</div>
+                    <div style="font-size: 2.5rem; color: #ff6666; font-family: var(--font-impact);">${totalRmat.toLocaleString()}</div>
+                </div>`;
+            }
+
+            document.getElementById('logiResult').style.display = 'block';
+        });
+
+        // ============ FILTER & SEARCH ============
+        const searchBox = document.getElementById('searchBox');
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const toolCards = document.querySelectorAll('.tool-card');
+        let currentFilter = 'all';
+
+        function filterTools() {
+            const searchTerm = searchBox.value.toLowerCase();
+            toolCards.forEach(card => {
+                const category = card.dataset.category;
+                const name = card.querySelector('.tool-name').textContent.toLowerCase();
+                const matchesFilter = currentFilter === 'all' || category === currentFilter;
+                const matchesSearch = name.includes(searchTerm);
+                card.style.display = (matchesFilter && matchesSearch) ? 'block' : 'none';
+            });
+        }
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                filterTools();
+            });
+        });
+
+        searchBox.addEventListener('input', filterTools);
+    </script>
+    <!-- CUSTOM CURSOR ELEMENTS -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <script>
+        // CURSOR LOGIC
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            // Dot follows instantly
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
+
+        // HOVER EFFECTS
+        const interactables = document.querySelectorAll('a, button, .strip-item, .war-card, .btn-brutalist, .tool-card');
+
+        interactables.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                document.body.classList.add('hovering');
+            });
+            el.addEventListener('mouseleave', () => {
+                document.body.classList.remove('hovering');
+            });
+        });
+    </script>
+</body>
+
+</html>

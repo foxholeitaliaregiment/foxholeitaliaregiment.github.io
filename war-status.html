@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITAR | STATUS GUERRA</title>
+    <link rel="icon" href="./icona.ico" sizes="any">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@400;700&family=Rajdhani:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific War Room Styles */
+        .war-dashboard {
+            padding: 180px 5% 100px;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url('./bg-war.png') no-repeat center center/cover;
+            position: relative;
+            box-shadow: inset 0 0 150px #000;
+        }
+
+        .dashboard-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .status-header {
+            text-align: center;
+            margin-bottom: 60px;
+            border-bottom: 2px solid #222;
+            padding-bottom: 40px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            border: 1px solid var(--col-highlight);
+            color: var(--col-highlight);
+            padding: 5px 15px;
+            font-family: var(--font-heading);
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            background: rgba(117, 146, 66, 0.1);
+        }
+
+        /* HUD GRID */
+        .war-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .war-card {
+            background: rgba(10, 10, 10, 0.8);
+            border: 1px solid #333;
+            padding: 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .war-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: #333;
+        }
+
+        .war-card:hover {
+            transform: translateY(-5px);
+            border-color: #555;
+        }
+
+        /* SPECIFIC CARD STYLES */
+        .card-war-num {
+            border-color: #444;
+        }
+
+        .card-war-num::before {
+            background: #fff;
+        }
+
+        .card-col {
+            border-color: #759242;
+            box-shadow: 0 0 20px rgba(117, 146, 66, 0.1);
+        }
+
+        .card-col::before {
+            background: #759242;
+        }
+
+        .card-warden {
+            border-color: #2e4d76;
+            box-shadow: 0 0 20px rgba(46, 77, 118, 0.1);
+        }
+
+        .card-warden::before {
+            background: #2e4d76;
+        }
+
+        .data-label {
+            font-family: var(--font-heading);
+            color: #888;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .data-value {
+            font-family: var(--font-impact);
+            font-size: 5rem;
+            color: #fff;
+            line-height: 0.9;
+            text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .data-value.small {
+            font-size: 3.5rem;
+        }
+
+        .data-unit {
+            font-size: 1rem;
+            font-family: var(--font-heading);
+            color: #666;
+            vertical-align: middle;
+        }
+
+        /* MAP CTA */
+        .map-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid #222;
+            padding: 40px;
+            text-align: center;
+            margin-top: 60px;
+            position: relative;
+        }
+
+        .map-corners {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border: 2px solid #555;
+            transition: all 0.3s;
+        }
+
+        .tr {
+            top: -2px;
+            right: -2px;
+            border-left: none;
+            border-bottom: none;
+        }
+
+        .bl {
+            bottom: -2px;
+            left: -2px;
+            border-right: none;
+            border-top: none;
+        }
+
+        .map-section:hover .map-corners {
+            width: 20px;
+            height: 20px;
+            border-color: var(--col-highlight);
+        }
+
+        @media(max-width: 768px) {
+            .giant-text {
+                font-size: 3.5rem !important;
+            }
+
+            .data-value {
+                font-size: 4rem;
+            }
+
+            .war-dashboard {
+                padding-top: 120px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV OVERLAY (Same as Index) -->
+    <nav class="cinematic-nav">
+        <div class="nav-logo">ITAR</div>
+        <div class="nav-items">
+            <a href="index.html">HOME</a>
+            <a href="index.html#war-room">WAR ROOM</a>
+            <a href="index.html#propaganda">PROPAGANDA</a>
+            <a href="war-status.html" style="color: var(--col-highlight);">WAR STATUS</a>
+        </div>
+
+        <!-- Mobile Toggle -->
+        <div class="mobile-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu">
+        <a href="index.html">HOME</a>
+        <a href="war-status.html">WAR STATUS</a>
+        <a href="https://discord.gg/PjBqEg2ZK3" target="_blank" class="mobile-btn">
+            <i class="fab fa-discord"></i> DISCORD
+        </a>
+    </div>
+
+    <!-- DASHBOARD -->
+    <section class="war-dashboard">
+        <div class="dashboard-content">
+            <div class="status-header">
+                <div class="status-badge">CONNESSIONE SICURA: LIVE-1</div>
+                <h1 class="giant-text" style="font-size: 6rem;">SITUAZIONE<br>BELLICA</h1>
+                <p class="hero-statement">REPORT UFFICIALE DAL FRONTE</p>
+            </div>
+
+            <div class="war-grid">
+                <!-- Status Cards -->
+                <div class="war-card card-war-num">
+                    <div class="data-label">CONFLITTO N°</div>
+                    <div class="data-value" id="war-number">...</div>
+                </div>
+
+                <div class="war-card">
+                    <div class="data-label">GIORNI TRASCORSI</div>
+                    <div class="data-value" id="war-day">...</div>
+                    <div class="data-unit">DAY OF WAR</div>
+                </div>
+
+                <div class="war-card">
+                    <div class="data-label">STATO ATTUALE</div>
+                    <div class="data-value small" id="resistance-status" style="font-size: 2.5rem; margin-top: 20px;">
+                        LOADING</div>
+                </div>
+            </div>
+
+            <!-- Casualty Row -->
+            <div class="war-grid">
+                <div class="war-card card-col">
+                    <div class="data-label" style="color: #759242;">CADUTI COLONIALI</div>
+                    <div class="data-value small" id="col-casualties" style="color: #759242;">...</div>
+                </div>
+
+                <div class="war-card card-warden">
+                    <div class="data-label" style="color: #4a7ebb;">CADUTI WARDEN</div>
+                    <div class="data-value small" id="warden-casualties" style="color: #4a7ebb;">...</div>
+                </div>
+            </div>
+
+            <!-- MAP BUTTON -->
+            <div class="map-section">
+                <div class="map-corners tr"></div>
+                <div class="map-corners bl"></div>
+
+                <h3 class="data-label" style="font-size: 1.5rem; color: #fff; margin-bottom: 30px;">
+                    <i class="fas fa-satellite-dish"></i> INTELLIGENCE TATTICA
+                </h3>
+
+                <div class="map-iframe-container" style="border: 1px solid #333; overflow: hidden; position: relative;">
+                    <iframe src="https://foxholestats.com/" width="100%" height="800" style="border: none;"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                </p>
+            </div>
+
+            <div class="refresh-btn">
+                <p style="color: #444; margin-top: 40px; font-size: 0.7rem;">DATI SINCRONIZZATI CON FOXHOLE WAR API</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // NAVIGATION
+        const mobileToggle = document.querySelector('.mobile-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const nav = document.querySelector('.cinematic-nav');
+
+        if (mobileToggle) {
+            mobileToggle.addEventListener('click', () => {
+                mobileToggle.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                const icon = mobileToggle.querySelector('i');
+                icon.classList.toggle('fa-bars');
+                icon.classList.toggle('fa-times');
+            });
+        }
+
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // API CONFIG
+        const BASE_URL = "https://war-service-live.foxholeservices.com/api/worldconquest";
+        const PROXY = "https://corsproxy.io/?";
+
+        // Helper: Try direct, fallback to proxy
+        async function apiFetch(endpoint) {
+            const url = `${BASE_URL}${endpoint}`;
+            try {
+                // Try direct first (faster if CORS allowed)
+                const direct = await fetch(url);
+                if (direct.ok) return await direct.json();
+            } catch (e) { /* CORS blocked, try proxy */ }
+
+            // Fallback to proxy
+            const proxied = await fetch(PROXY + encodeURIComponent(url));
+            if (!proxied.ok) throw new Error('API unavailable');
+            return await proxied.json();
+        }
+
+        // MAIN FETCH
+        async function loadAllStats() {
+            try {
+                // 1. WAR INFO (fast, single call)
+                const war = await apiFetch('/war');
+                document.getElementById('war-number').innerText = war.warNumber;
+
+                if (war.conquestStartTime) {
+                    const days = Math.floor((Date.now() - war.conquestStartTime) / 86400000);
+                    document.getElementById('war-day').innerText = days;
+                } else {
+                    document.getElementById('war-day').innerText = "PRE";
+                }
+
+                if (war.winner === "NONE") {
+                    document.getElementById('resistance-status').innerText = "IN CORSO";
+                    document.getElementById('resistance-status').style.color = "#759242";
+                } else {
+                    document.getElementById('resistance-status').innerText = war.winner;
+                }
+
+                // 2. ALL MAP REPORTS (for casualties & enlistments)
+                document.getElementById('col-casualties').innerText = "Caricamento...";
+                document.getElementById('warden-casualties').innerText = "Caricamento...";
+
+                const maps = await apiFetch('/maps');
+
+                let colCasualties = 0, wardenCasualties = 0;
+                let colEnlistments = 0, wardenEnlistments = 0;
+                let processed = 0;
+
+                // Process in parallel batches of 10 for speed
+                const BATCH = 10;
+                for (let i = 0; i < maps.length; i += BATCH) {
+                    const batch = maps.slice(i, i + BATCH);
+                    const results = await Promise.all(
+                        batch.map(m => apiFetch(`/warReport/${m}`).catch(() => null))
+                    );
+
+                    results.forEach(r => {
+                        if (r) {
+                            colCasualties += r.colonialCasualties || 0;
+                            wardenCasualties += r.wardenCasualties || 0;
+                        }
+                    });
+
+                    processed += batch.length;
+
+                    // Live update
+                    document.getElementById('col-casualties').innerText = colCasualties.toLocaleString();
+                    document.getElementById('warden-casualties').innerText = wardenCasualties.toLocaleString();
+                }
+
+            } catch (err) {
+                console.error(err);
+                document.getElementById('war-number').innerText = "OFFLINE";
+                document.getElementById('resistance-status').innerText = "Errore connessione";
+                document.getElementById('resistance-status').style.color = "#ff4444";
+            }
+        }
+
+        loadAllStats();
+    </script>
+    <!-- CUSTOM CURSOR ELEMENTS -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <script>
+        // CURSOR LOGIC
+        const cursorDot = document.querySelector('.cursor-dot');
+        const cursorOutline = document.querySelector('.cursor-outline');
+
+        window.addEventListener('mousemove', (e) => {
+            const posX = e.clientX;
+            const posY = e.clientY;
+
+            // Dot follows instantly
+            cursorDot.style.left = `${posX}px`;
+            cursorDot.style.top = `${posY}px`;
+
+            cursorOutline.animate({
+                left: `${posX}px`,
+                top: `${posY}px`
+            }, { duration: 500, fill: "forwards" });
+        });
+
+        // HOVER EFFECTS
+        const interactables = document.querySelectorAll('a, button, .strip-item, .war-card, .btn-brutalist, .tool-card');
+
+        interactables.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                document.body.classList.add('hovering');
+            });
+            el.addEventListener('mouseleave', () => {
+                document.body.classList.remove('hovering');
+            });
+        });
+    </script>
+</body>
+
+</html>
